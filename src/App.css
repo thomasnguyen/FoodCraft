@@ -22,6 +22,88 @@
   font-size: large;
 }
 
+/* 
+================== 
+Original Author: Thomas Nguyen
+================== 
+*/
+
+body{
+  background:#F7F7F7;
+}
+
+.content{
+  width:100%;
+  display:flex;
+}
+
+.FilterBar{
+  flex:2;
+
+  background:gray;
+  height:1000px;
+}
+
+.RecipeContainer{
+  flex:8;
+  height:1000px;
+
+  padding:20px;
+}
+
+.RecipeCard{
+  width:325px;
+  height:230px;
+}
+
+.RecipeCard__title{
+  position:relative;
+}
+
+.RecipeCard__title_image{
+  border-radius:10px 10px 0px 0px;
+}
+
+.RecipeCard__title_title{
+  position: absolute;
+  top:185px;
+  left:20px;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+}
+
+.RecipeCard__title__percent{
+  position: absolute;
+  left:20px;
+  top:150px;
+  
+  font-size:14px;
+  line-height:30px;
+  color:white;
+
+  padding:0px 10px 0px 10px;
+  border-radius:5px;
+  height:30px;
+  background:#8DBA26;
+}
+
+
+.RecipeCard__description{
+  color:black;
+  background:white;
+  height:100px;
+
+  /* 453 g dried chickpea: */
+  opacity: 0.52;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: left;
+
+  padding:10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
