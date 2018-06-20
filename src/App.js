@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import  FilterBar from  './FilterBar';
+import  RecipeContainer from  './RecipeContainer';
 
 class App extends Component {
   render() {
