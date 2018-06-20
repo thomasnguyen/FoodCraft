@@ -41,19 +41,24 @@ body{
   flex:2;
 
   background:gray;
-  height:1000px;
+
 }
 
 .RecipeContainer{
   flex:8;
-  height:1000px;
 
+  
   padding:20px;
+  display:flex;
+  flex-wrap: wrap;
 }
 
 .RecipeCard{
-  width:325px;
-  height:230px;
+  width:300px;
+
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:10px;
 }
 
 .RecipeCard__title{
@@ -61,12 +66,14 @@ body{
 }
 
 .RecipeCard__title_image{
+  width:300px;
+  height:265px;
   border-radius:10px 10px 0px 0px;
 }
 
 .RecipeCard__title_title{
   position: absolute;
-  top:185px;
+  top:225px;
   left:20px;
   font-size: 24px;
   color: #FFFFFF;
@@ -76,7 +83,7 @@ body{
 .RecipeCard__title__percent{
   position: absolute;
   left:20px;
-  top:150px;
+  top:190px;
   
   font-size:14px;
   line-height:30px;
@@ -92,9 +99,8 @@ body{
 .RecipeCard__description{
   color:black;
   background:white;
-  height:100px;
+  height:70px;
 
-  /* 453 g dried chickpea: */
   opacity: 0.52;
   font-size: 14px;
   color: #000000;
@@ -102,6 +108,10 @@ body{
   text-align: left;
 
   padding:10px;
+
+  
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
+  border-radius: 5px;
 }
 
 @keyframes App-logo-spin {
