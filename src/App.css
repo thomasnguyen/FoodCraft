@@ -63,6 +63,7 @@ body{
 
 .RecipeCard__title{
   position:relative;
+  height:265px;
 }
 
 .RecipeCard__title_image{
@@ -110,8 +111,8 @@ body{
   padding:10px;
 
   
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
-  border-radius: 5px;
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.20);
+  border-radius: 0px 0px 5px 5px;
 }
 
 @keyframes App-logo-spin {
