@@ -6,9 +6,9 @@ class RecipeCard extends Component {
         return (
             <div className = "RecipeCard">
                 <div className = "RecipeCard__title">
-                    <div className = "RecipeCard__title__percent"> 25%</div>
-                    <div className = "RecipeCard__title_title">Mushroom Casserole</div>
-                    <img className = "RecipeCard__title_image" src = "https://images.101cookbooks.com/mushroom_casserole_recipe.jpg" alt = ""/>
+                    <div className = "RecipeCard__title__percent">{this.props.percent}</div>
+                    <div className = "RecipeCard__title_title">{this.props.title}</div>
+                    <img className = "RecipeCard__title_image" src = {this.props.image} alt = ""/>
                 </div>
                 <div className ="RecipeCard__description">
                 Preheat oven to 350F degrees. Rub a medium-large baking dish with a bit of olive oil or butter and set aside.  
