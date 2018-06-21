@@ -11,7 +11,7 @@ class RecipeCard extends Component {
                     <img className = "RecipeCard__title_image" src = {this.props.image} alt = ""/>
                 </div>
                 <div className ="RecipeCard__description">
-                Preheat oven to 350F degrees. Rub a medium-large baking dish with a bit of olive oil or butter and set aside.  
+                    {this.props.description}
                 </div>
             </div>
         );
