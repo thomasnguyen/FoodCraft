@@ -126,6 +126,7 @@ Filtered Bar
 ================== 
 */
 
+
 .Search{
   position: relative;
   
@@ -160,6 +161,8 @@ Filtered Bar
 }
 
 
+
+
 .ingredients__header{
   text-align: left;
   /* Ingredients: */
@@ -172,21 +175,36 @@ Filtered Bar
 
 .ingredient__tag{
   /* Rectangle 5: */
-  background: #C0D4FF;
+
+
   border-radius: 10px;
   /* Chicken: */
   font-size: 12px;
-  color: rgb(39, 89, 208);
   letter-spacing: 0;
   text-align: left;
   padding:10px;
   font-weight:500;
 
+  margin-bottom:10px;
+
   display:flex;
   justify-content: space-between;
-
 }
 
+.ingredient__tag.blue{
+  background: #C0D4FF;
+  color: rgb(39, 89, 208);
+}
+
+.ingredient__tag.brown{
+  background: #EAC097;
+  color: #843D2F;
+}
+
+.ingredient__tag.green{
+  background: #BFE5CE;
+  color: #248441;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

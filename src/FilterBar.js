@@ -19,7 +19,10 @@ class FilterBar extends Component {
                         <hr />
                     </div>
 
-                    <Ingredient />
+                    <Ingredient color = "brown" tag_name = "Bread"/>
+                    <Ingredient color = "blue" tag_name = "Chicken"/>
+                    <Ingredient color = "green" tag_name = "Broccoli"/>
+
                 </div>
             </div>
         );
