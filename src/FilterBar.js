@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import Ingredient from  './Ingredient';
+
+
 
 class FilterBar extends Component {
     render(){
@@ -8,6 +11,15 @@ class FilterBar extends Component {
                 <div className ="Search">
                     <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png" /></a>
                     <input  className = "SearchBar" type="text" />
+                </div>
+
+                <div className = "ingredients">
+                    <div className = "ingredients__header">
+                        <p> Ingredients </p>
+                        <hr />
+                    </div>
+
+                    <Ingredient />
                 </div>
             </div>
         );
