@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import  FilterBar from  './FilterBar';
 import  RecipeContainer from  './RecipeContainer';
-
+import data from './openrecipes.json';
 class App extends Component {
   constructor(props){
     super(props); 
@@ -30,10 +30,20 @@ class App extends Component {
           "description": "regular"
         },
         {
+          "title": "Fruit Salad Herbs",
+          "image": "https://images.101cookbooks.com/fruit-salad-thai-herbs.jpg",
+          "description": "regular"
+        },
+        {
           "title": "Pop Congee",
           "image": "https://images.101cookbooks.com/weeknight-ponzu-pasta-h.jpg?w=680&auto=format",
           "description": "regular"
-        }
+        },
+        {
+          "title": "Pop Congee",
+          "image": "https://images.101cookbooks.com/weeknight-ponzu-pasta-h.jpg?w=680&auto=format",
+          "description": "regular"
+        },
 
       ]
     }
@@ -43,11 +53,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to React  
+          </h1>
         </header>
         <div className = "content">
           <FilterBar />
-          <RecipeContainer recipes={this.state.recipes}/>
+          <RecipeContainer recipes={data}/>
         </div>
       </div>
     );

@@ -5,6 +5,7 @@ class FilterBar extends Component {
     render(){
         return (
             <div className = "FilterBar">
+                <input  className = "SearchBar" type="text" />
             </div>
         );
     }

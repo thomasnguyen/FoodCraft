@@ -5,9 +5,9 @@ import  RecipeCard from  './RecipeCard';
 class RecipeContainer extends Component {
     render(){
         let recipeArray = this.props.recipes.map((recipe) =>
-            <RecipeCard title = {recipe.title}
+            <RecipeCard title = {recipe.name}
                         percent = "25%"
-                        description = "sdf"
+                        description = {recipe.ingredients}
                         image = {recipe.image} />
         );
         return (
