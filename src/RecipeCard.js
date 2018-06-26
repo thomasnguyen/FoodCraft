@@ -11,7 +11,13 @@ class RecipeCard extends Component {
                     <img className = "RecipeCard__title_image" src = {this.props.image} alt = ""/>
                 </div>
                 <div className ="RecipeCard__description">
-                    {this.props.description.substring(0,110) + '...'}
+                    <div className = "RecipeCard__info">
+                        <div>{`Recipe Yield: 7`}</div>
+                        <div>{`Cook Time: ${this.props.cook_time}`}</div>
+                        <div>{`Prep Time: ${this.props.prep_time}`}</div>
+                    </div>
+                    <div className = "RecipeCard__quick-description">{this.props.description.substring(0,80) + '...'}
+                    </div>
                 </div>
             </div>
         );

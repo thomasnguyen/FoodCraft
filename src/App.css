@@ -226,6 +226,10 @@ body{
   background: #BFE5CE;
   color: #248441;
 }
+
+.RecipeCard__info{
+  display:flex;
+}
   
 
 @keyframes App-logo-spin {

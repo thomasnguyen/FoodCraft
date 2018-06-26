@@ -9,42 +9,6 @@ class App extends Component {
     super(props); 
       this.state = {
         recipes: [
-          {
-            "title": "Mushroom Casserole",
-            "image": "https://images.101cookbooks.com/mushroom_casserole_recipe.jpg",
-            "description": "regular"
-          },
-          {
-            "title": "Sauteed Zucchini",
-            "image": "https://www.101cookbooks.com/mt-static/images/food/sauteed_zucchini_recipe.jpg",
-            "description": "regular"
-          },
-          {
-            "title": "Pop Congee",
-            "image": "https://images.101cookbooks.com/instant-pop-congee-turmeric-h.jpg",
-            "description": "regular"
-          },
-          {
-          "title": "Ponzu Pasta",
-          "image": "https://www.101cookbooks.com/mt-static/images/food/weeknight-ponzu-pasta-h-4.jpg",
-          "description": "regular"
-        },
-        {
-          "title": "Fruit Salad Herbs",
-          "image": "https://images.101cookbooks.com/fruit-salad-thai-herbs.jpg",
-          "description": "regular"
-        },
-        {
-          "title": "Pop Congee",
-          "image": "https://images.101cookbooks.com/weeknight-ponzu-pasta-h.jpg?w=680&auto=format",
-          "description": "regular"
-        },
-        {
-          "title": "Pop Congee",
-          "image": "https://images.101cookbooks.com/weeknight-ponzu-pasta-h.jpg?w=680&auto=format",
-          "description": "regular"
-        },
-
       ]
     }
   }
