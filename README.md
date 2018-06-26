@@ -1,6 +1,9 @@
 # FoodCraft
 
 A simple web apppliaction to help you craft your favorite dishes. Built using ReactJS for the front-end and NodeJS for the back-end.
+
+[logo]: https://puu.sh/AM1FB/bca21fb310.png "Preview App"   
+
 ## Getting Started
 
 Make sure you have the latest version of Node.js installed. If you don't have it, or are an older version, you can visit Nodejs.org and download the installer.
@@ -22,7 +25,7 @@ npm start
 
 ## Built With
 
-* [React](https://reactjs.org/) - The web framework used
+* [React](https://reactjs.org/) - The powerful JS framework. I <3 you FB.
 
 ## Contributing
 
@@ -40,6 +43,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* My mom 
+* My dad
