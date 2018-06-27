@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import helper from './helper';
 
 
 class RecipeCard extends Component {
@@ -20,7 +21,7 @@ class RecipeCard extends Component {
                         </div>
                         <div className = "quick_stats">
                             <div className = "quick_stats__number">
-                                <i className="fas fa-clock"></i>{`${this.props.prep_time}`} 
+                                <i className="fas fa-clock"></i>{`${helper.formatTime(this.props.prep_time)}`} 
                             </div>
                             <div className="quick_stats__title">Prep Time</div>
                         </div>
