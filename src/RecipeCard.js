@@ -15,19 +15,30 @@ class RecipeCard extends Component {
                     <div className = "RecipeCard__info">
                         <div className = "quick_stats">
                             <div className = "quick_stats__number">
-                                <i className="fas fa-utensils"></i>{`${this.props.cook_time}`}
+                                <i className="fas fa-utensils"></i>
+                                <span className="time">{`${helper.formatTime(this.props.cook_time)}`} </span>
                             </div>
                             <div className="quick_stats__title">Cook Time</div>
                         </div>
                         <div className = "quick_stats">
                             <div className = "quick_stats__number">
-                                <i className="fas fa-clock"></i>{`${helper.formatTime(this.props.prep_time)}`} 
+                                <i className="fas fa-clock"></i> 
+                                <span className="time">{`${helper.formatTime(this.props.prep_time)}`}  </span>
                             </div>
                             <div className="quick_stats__title">Prep Time</div>
                         </div>
+                        <div className = "quick_stats">
+                            <div className = "quick_stats__number">
+                                <i className="fas fa-stroopwafel"></i> 
+                                <span className="time">{`14`}  </span>
+                            </div>
+                            <div className="quick_stats__title">Ingredients</div>
+                        </div>
                     </div>
-                    <div className = "RecipeCard__quick-description">{this.props.description.substring(0,70) + '...'}
+                    { /*
+                    <div className = "RecipeCard__quick-description">{this.props.description.substring(0,85) + '...'}
                     </div>
+                    */}
                 </div>
             </div>
         );

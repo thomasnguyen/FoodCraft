@@ -84,13 +84,13 @@ body{
 }
 .RecipeCard__title{
   position:relative;
-  height:265px;
+  height:255px;
 }
 
 
 .RecipeCard__title_image{
   width:300px;
-  height:265px;
+  height:255px;
   border-radius:10px 10px 0px 0px;
   object-fit: cover;
   }
@@ -103,13 +103,13 @@ body{
   left:20px;
   font-size: 24px;
   color: #FFFFFF;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+  text-shadow: 0 2px 4px rgba(0,0,0,1);
 }
 
 .RecipeCard__title__percent{
   position: absolute;
-  left:20px;
-  top:155px;
+  right:15px;
+  top:15px;
   
   font-size:14px;
   line-height:30px;
@@ -125,11 +125,10 @@ body{
 .RecipeCard__description{
   color:black;
   background:white;
-  height:70px;
+  height:30px;
 
-  opacity: 0.52;
   font-size: 14px;
-  color: #000000;
+  color: #7A7A7A;
   letter-spacing: 0;
   text-align: left;
 
@@ -229,18 +228,27 @@ body{
 
 .RecipeCard__info{
   display:flex;
+  justify-content: space-between;
 }
 
 .RecipeCard__info > .quick_stats{
-  margin-right:30px;
+  margin-right:20px;
   display:flex;
   flex-direction: column;
   font-size:13px;
+
 }  
+
+
+
 
 .quick_stats__number > .fas {
   margin-right:5px;
-  opacity:0.3;
+  color:#7A7A7A;
+}
+
+.quick_stats__number > .time{
+  color:#4E4A4E;
 }
 
 .quick_stats__title{
@@ -249,7 +257,7 @@ body{
 }
 
 .RecipeCard__quick-description{
-  margin-top:13px;
+  margin-top:15px;
   font-size:12px;
 }
 
