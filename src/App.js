@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import  FilterBar from  './FilterBar';
 import  RecipeContainer from  './RecipeContainer';
-import data from './openrecipes.json';
+import data from './openrecipes1.json';
 class App extends Component {
   constructor(props){
     super(props); 

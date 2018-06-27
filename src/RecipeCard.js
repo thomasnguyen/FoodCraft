@@ -12,10 +12,20 @@ class RecipeCard extends Component {
                 </div>
                 <div className ="RecipeCard__description">
                     <div className = "RecipeCard__info">
-                        <div><i className="fas fa-utensils"></i>{`${this.props.cook_time}`}</div>
-                        <div><i className="fas fa-clock"></i>{`${this.props.prep_time}`}</div>
+                        <div className = "quick_stats">
+                            <div className = "quick_stats__number">
+                                <i className="fas fa-utensils"></i>{`${this.props.cook_time}`}
+                            </div>
+                            <div className="quick_stats__title">Cook Time</div>
+                        </div>
+                        <div className = "quick_stats">
+                            <div className = "quick_stats__number">
+                                <i className="fas fa-clock"></i>{`${this.props.prep_time}`} 
+                            </div>
+                            <div className="quick_stats__title">Prep Time</div>
+                        </div>
                     </div>
-                    <div className = "RecipeCard__quick-description">{this.props.description.substring(0,80) + '...'}
+                    <div className = "RecipeCard__quick-description">{this.props.description.substring(0,70) + '...'}
                     </div>
                 </div>
             </div>
