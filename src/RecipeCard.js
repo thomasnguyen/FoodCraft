@@ -15,6 +15,13 @@ class RecipeCard extends Component {
                     <div className = "RecipeCard__info">
                         <div className = "quick_stats">
                             <div className = "quick_stats__number">
+                                <i className="fas fa-stroopwafel"></i> 
+                                <span className="time">{helper.calcIngredient(this.props.ingredients)}  </span>
+                            </div>
+                            <div className="quick_stats__title">Ingredients</div>
+                        </div>
+                        <div className = "quick_stats">
+                            <div className = "quick_stats__number">
                                 <i className="fas fa-utensils"></i>
                                 <span className="time">{`${helper.formatTime(this.props.cook_time)}`} </span>
                             </div>
@@ -26,13 +33,6 @@ class RecipeCard extends Component {
                                 <span className="time">{`${helper.formatTime(this.props.prep_time)}`}  </span>
                             </div>
                             <div className="quick_stats__title">Prep Time</div>
-                        </div>
-                        <div className = "quick_stats">
-                            <div className = "quick_stats__number">
-                                <i className="fas fa-stroopwafel"></i> 
-                                <span className="time">{`14`}  </span>
-                            </div>
-                            <div className="quick_stats__title">Ingredients</div>
                         </div>
                     </div>
                     { /*

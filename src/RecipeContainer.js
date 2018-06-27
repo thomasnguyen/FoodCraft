@@ -7,6 +7,7 @@ class RecipeContainer extends Component {
         let recipeArray = this.props.recipes.map((recipe) =>
             <RecipeCard title        = {recipe.name}
                         percent      = "25%"
+                        ingredients  = {recipe.ingredients}
                         description  = {recipe.description}
                         image        = {recipe.image} 
                         cook_time    = {recipe.cookTime}

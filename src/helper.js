@@ -14,6 +14,10 @@ let helpers =  {
             totalseconds = hours * 3600  + minutes * 60 + seconds;
           }
      return (totalseconds / 60) + ' mins';
+    },
+
+    calcIngredient(ingredients){
+        return ingredients.split("\n").length;
     }
   }
   
