@@ -6,7 +6,12 @@ class Header extends Component {
         return(
             <div className = "Header">
                 <div className = "Header__title">
-                    <img  className = "logo_image" src={images} alt="logo"/> <span className="logo_text"> FoodCraft </span>
+                    <div className="Header__log">
+                        <img  className = "logo_image" src={images} alt="logo"/> <span className="logo_text"> <b>Food</b>Craft </span>
+                    </div>
+                    <div className = "Header__search">
+                        <input  className = "SearchBar global" type="text" placeholder = "Global search...." />
+                    </div>
                 </div>
                 <div className = "Header__profile">
                 </div>
