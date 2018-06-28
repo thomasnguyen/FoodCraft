@@ -15,6 +15,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="modal_overlay">
+        <div className="modal"></div>
+      </div>
        <Header />
         <div className = "content">
           <FilterBar />
