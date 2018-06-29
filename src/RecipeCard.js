@@ -5,7 +5,7 @@ import helper from './helper';
 class RecipeCard extends Component {
     render(){
         return (
-            <div className = "RecipeCard">
+            <div  className = "RecipeCard" onClick = {() => this.props.handleOpen(this.props.title)}>
                 <div className = "RecipeCard__title">
                     <div className = "RecipeCard__title__percent">{this.props.percent}</div>
                     <div className = "RecipeCard__title_title">{this.props.title}</div>

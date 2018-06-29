@@ -13,10 +13,19 @@ class App extends Component {
   constructor(props){
     super(props); 
       this.state = {
-        showModal: false,
+        isModalShow: false,
+        recipeModalId: "",
         recipes: [
       ]
     }
+  }
+
+  showModal = (str) => {
+    this.setState({ recipeModalId: str, isModalShow: true});
+  }
+  
+  hideModal = () => {
+    this.setState({isModalShow: false});
   }
   render() {
     const Modal = ({ handleClose, show, children }) => {
@@ -37,7 +46,7 @@ class App extends Component {
 
     return (
       <div className="App">
-
+        {/*<button onClick={this.showModal}> SHOW </button> */}
 
 
 
@@ -45,13 +54,13 @@ class App extends Component {
        <Header />
         <div className = "content">
           <FilterBar />
-          <RecipeContainer recipes={data}/>
+
+          <RecipeContainer handleOpen = {this.showModal} recipes={data}/>
         </div>
 
-    <Modal show={true} handleClose={this.hideModal} >
-        <p>Modal</p>
-        <p>Data</p>
-      </Modal>
+    <Modal show={this.state.isModalShow} handleClose={this.hideModal} >
+        <p>{this.state.recipeModalId}</p>
+    </Modal>
 
       </div>
     );

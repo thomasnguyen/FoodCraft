@@ -13,7 +13,8 @@ class RecipeContainer extends Component {
                         cook_time    = {recipe.cookTime}
                         prep_time    = {recipe.prepTime}
                         recipe_yield = {recipe.recipeYield}
-                        key          = {recipe.name + recipe.ingredients} />
+                        key          = {recipe.name + recipe.ingredients}
+                        handleOpen   = {this.props.handleOpen} />
         );
         return (
             
