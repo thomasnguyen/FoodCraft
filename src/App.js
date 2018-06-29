@@ -20,8 +20,16 @@ class App extends Component {
     }
   }
 
-  showModal = (str) => {
-    this.setState({ recipeModalId: str, isModalShow: true});
+  getRecipeFromCookBook(id){
+    for (var x = 0; x <= data.length; x++){
+      if (id === data[x].name){
+        return data[x];
+      }
+    }
+  }
+
+  showModal = (id) => {
+    this.setState({ recipeModalId: this.getRecipeFromCookBook(id), isModalShow: true});
   }
   
   hideModal = () => {
@@ -59,7 +67,8 @@ class App extends Component {
         </div>
 
     <Modal show={this.state.isModalShow} handleClose={this.hideModal} >
-        <p>{this.state.recipeModalId}</p>
+        <p>{this.state.recipeModalId.name}
+        {this.state.recipeModalId.url}</p>
     </Modal>
 
       </div>
