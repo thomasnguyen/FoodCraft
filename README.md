@@ -2,13 +2,12 @@
 
 A simple web apppliaction to help you craft your favorite dishes. Built using ReactJS for the front-end and NodeJS for the back-end.
 
-[logo]: https://puu.sh/AM1FB/bca21fb310.png "Preview App"   
+![screenshot](https://puu.sh/ANROD/4aa70d513d.png)
 
 ## Getting Started
 
 Make sure you have the latest version of Node.js installed. If you don't have it, or are an older version, you can visit Nodejs.org and download the installer.
 
-![screenshot](https://puu.sh/ANROD/4aa70d513d.png)
 
 ### Installing
 
