@@ -8,6 +8,8 @@ A simple web apppliaction to help you craft your favorite dishes. Built using Re
 
 Make sure you have the latest version of Node.js installed. If you don't have it, or are an older version, you can visit Nodejs.org and download the installer.
 
+![screenshot](https://puu.sh/ANROD/4aa70d513d.png)
+
 ### Installing
 
 A step by step series of examples that tell you have to get a development environment running
