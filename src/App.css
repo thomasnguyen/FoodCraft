@@ -10,10 +10,25 @@
 .modal-main {
   position:fixed;
   background: white;
-  width: 80%;
+  width: 600px;
   height: auto;
-  top:50%;
+  top:10%;
   left:50%;
+  transform: translate(-50%,-10%);
+}
+
+.modal_img{
+  width:100%;
+}
+
+.modal_container{
+  position: absolute;
+  background:white;
+  z-index: 100;
+  top:calc(50% + 300px);
+  width:90%;
+  left: calc(50%);
+  height:500px;
   transform: translate(-50%,-50%);
 }
 
@@ -101,7 +116,6 @@ body{
 
 .RecipeCard{
   width:300px;
-
   margin-left:10px;
   margin-right:10px;
   margin-bottom:20px;
@@ -110,6 +124,7 @@ body{
 }
 
 .RecipeCard:hover{
+  cursor:pointer;
   margin-top:-5px;
   margin-bottom:5px;
   cursor: pointer;

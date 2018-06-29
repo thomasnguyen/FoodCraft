@@ -54,11 +54,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        {/*<button onClick={this.showModal}> SHOW </button> */}
-
-
-
-
        <Header />
         <div className = "content">
           <FilterBar />
@@ -67,8 +62,9 @@ class App extends Component {
         </div>
 
     <Modal show={this.state.isModalShow} handleClose={this.hideModal} >
-        <p>{this.state.recipeModalId.name}
-        {this.state.recipeModalId.url}</p>
+        <div className = "modal_container"> {this.state.recipeModalId.name} </div>
+        <img className="modal_img" src = {this.state.recipeModalId.image} />
+
     </Modal>
 
       </div>
