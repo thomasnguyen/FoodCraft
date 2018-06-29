@@ -4,6 +4,9 @@ import './App.css';
 import  FilterBar from  './FilterBar';
 import  RecipeContainer from  './RecipeContainer';
 import data from './openrecipes1.json';
+import helper from './helper.js';
+import RecipeStats from './RecipeStats.js';
+
 
 
 
@@ -35,20 +38,22 @@ class App extends Component {
   hideModal = () => {
     this.setState({isModalShow: false});
   }
+
+
+
   render() {
     const Modal = ({ handleClose, show, children }) => {
       const showHideClassName = show ? "modal display-block" : "modal display-none";
     
       return (
-        <div className={showHideClassName}>
+        <div className={showHideClassName} >
+        <div className = "black_screen" onClick={handleClose}> f</div>
           <section className="modal-main">
             {children}
-            <button onClick={handleClose}>close</button>
           </section>
         </div>
       );
     };
-
 
 
 
@@ -62,8 +67,21 @@ class App extends Component {
         </div>
 
     <Modal show={this.state.isModalShow} handleClose={this.hideModal} >
-        <div className = "modal_container"> {this.state.recipeModalId.name} </div>
-        <img className="modal_img" src = {this.state.recipeModalId.image} />
+        <div className = "modal_container"> 
+        
+          <div className = "modal_cover">
+              <h4>{this.state.recipeModalId.name} </h4>
+ 
+            <RecipeStats  ingredients = {this.state.recipeModalId.ingredients} 
+                          cookTime = {this.state.recipeModalId.cookTime} 
+                          prepTime = {this.state.recipeModalId.prepTime} />
+
+          <div>
+            {this.state.recipeModalId.ingredients}
+          </div>
+          </div>
+        
+        </div>
 
     </Modal>
 

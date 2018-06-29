@@ -15,10 +15,18 @@ let helpers =  {
           }
      return (totalseconds / 60) + ' mins';
     },
-
+  
     calcIngredient(ingredients){
-        return ingredients.split("\n").length;
-    }
+        if (ingredients !== undefined) {
+            return ingredients.split("\n").length;
+        }
+    },
+
+  splitIngredient(ingredients){
+      if (ingredients !== undefined)
+        return ingredients.split("\n");
   }
+  }
+
   
   export default helpers;
