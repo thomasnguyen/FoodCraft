@@ -16,10 +16,19 @@ class RecipeModal extends React.Component {
 
 		return (
 			<div>
-				<div className={`${showHideClassName} fadeInUp animated`}>
-					<div className="black_screen" onClick={this.props.handleClose} />
-					<section className="modal-main fadeInUp animated">
-						<div className="modal_container" style={imageBackground}>
+        <div className={`${showHideClassName} fadeInUp animated`}>
+        
+          <div className = "modal_exit" onClick={this.props.handleClose} > 
+            <i className="fas fa-times"></i>
+          </div>
+          <div className="black_screen" onClick={this.props.handleClose} />
+          
+          
+          <section className="modal-main fadeInUp animated">
+          
+
+            <div className="modal_container" style={imageBackground}>
+
 							<div className="modal_cover">
 								<h4>{this.props.recipes.name} </h4>
 
@@ -38,12 +47,14 @@ class RecipeModal extends React.Component {
 									<button className="full-details">
 										{" "}
 										Go to see full details{" "}
-										<i class="fas fa-external-link-alt" />
+										<i className="fas fa-external-link-alt" />
 									</button>{" "}
 								</a>
 								</div>
 							
-							</div>
+              </div>
+              
+             
 						</div>
 					</section>
 				</div>
