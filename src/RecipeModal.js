@@ -1,54 +1,48 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+
+import RecipeStats from './RecipeStats.js';
+import RecipeIngredients from './RecipeIngredients';
 
 class RecipeModal extends React.Component {
   render() {
-    // Render nothing if the "show" prop is false
-    if(!this.props.show) {
-      return null;
-    }
-
-    // The gray background
-    const backdropStyle = {
-      position: 'fixed',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'rgba(0,0,0,0.3)',
-      padding: 50
-    };
-
-    // The modal "window"
-    const modalStyle = {
-      backgroundColor: '#fff',
-      borderRadius: 5,
-      maxWidth: 500,
-      minHeight: 300,
-      margin: '0 auto',
-      padding: 30
-    };
+    const showHideClassName = this.props.show
+      ? "modal display-block"
+      : "modal display-none";
 
     return (
-        <div className="backdrop" >
-          <div className="modal" >
-            {this.props.children}
-  
-            <div className="footer">
-              <button onClick={this.props.onClose}>
-                Close
-              </button>
-            </div>
+      <div>
+        <div className={`${showHideClassName} fadeInUp animated`}>
+          <div className="black_screen" onClick={this.props.handleClose}>
           </div>
+          <section className="modal-main fadeInUp animated">
+            <div className="modal_container ">
+              <div className="modal_cover">
+                <h4>{this.props.recipes.name} </h4>
+
+                <RecipeStats
+                  ingredients={this.props.recipes.ingredients}
+                  cookTime={this.props.recipes.cookTime}
+                  prepTime={this.props.recipes.prepTime}
+                />
+
+                <div>
+                  <RecipeIngredients
+                    ingredients={this.props.recipes.ingredients}
+                  />
+                </div>
+                <a href={this.props.recipes.url}>
+                  <button className="full-details">
+                    {" "}
+                    Go to see full details{" "}
+                    <i class="fas fa-external-link-alt" />
+                  </button>{" "}
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
-      );
-    }
+      </div>
+    );
   }
-
-RecipeModal.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool,
-  children: PropTypes.node
-};
-
+}
 export default RecipeModal;

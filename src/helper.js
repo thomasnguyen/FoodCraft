@@ -26,6 +26,7 @@ let helpers =  {
       if (ingredients !== undefined)
         return ingredients.split("\n");
   }
+  
   }
 
   
