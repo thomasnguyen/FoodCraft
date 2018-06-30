@@ -1,60 +1,58 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import './App.css';
-import  FilterBar from  './FilterBar';
-import  RecipeContainer from  './RecipeContainer';
-import data from './openrecipes1.json';
-import RecipeModal from './RecipeModal';
+import React, { Component } from "react";
+import Header from "./Header";
+import "./App.css";
+import FilterBar from "./FilterBar";
+import RecipeContainer from "./RecipeContainer";
+import data from "./openrecipes1.json";
+import RecipeModal from "./RecipeModal";
 
 class App extends Component {
-  constructor(props){
-    super(props); 
-      this.state = {
-        isModalShow: false,
-        recipeModalId: "",
-        recipes: [
-      ]
-    }
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			isModalShow: false,
+			recipeModalId: "",
+			recipes: []
+		};
+	}
 
-  getRecipeFromCookBook(id){
-    for (var x = 0; x <= data.length; x++){
-      if (id === data[x].name){
-        return data[x];
-      }
-    }
-  }
+	getRecipeFromCookBook(id) {
+		for (var x = 0; x <= data.length; x++) {
+			if (id === data[x].name) {
+				return data[x];
+			}
+		}
+	}
 
-  showModal = (id) => {
-    this.setState({ recipeModalId: this.getRecipeFromCookBook(id), isModalShow: true});
-  }
-  
-  hideModal = () => {
-    this.setState({isModalShow: false});
-  }
+	showModal = id => {
+		this.setState({
+			recipeModalId: this.getRecipeFromCookBook(id),
+			isModalShow: true
+		});
+	};
 
+	hideModal = () => {
+		this.setState({ isModalShow: false });
+	};
 
+	render() {
+		return (
+			<div className="App">
+				<Header />
+				<div className="content">
+					<FilterBar />
 
-  render() {
+					<RecipeContainer handleOpen={this.showModal} recipes={data} />
+				</div>
 
-
-
-    return (
-      <div className="App">
-       <Header />
-        <div className = "content">
-          <FilterBar />
-
-          <RecipeContainer handleOpen = {this.showModal} recipes={data}/>
-        </div>
-
-    <RecipeModal recipes={this.state.recipeModalId} show={this.state.isModalShow} handleClose={this.hideModal} />
-
-
-
-      </div>
-    );
-  }
+				<RecipeModal
+					recipes={this.state.recipeModalId}
+					show={this.state.isModalShow}
+					handleClose={this.hideModal}
+				/>
+			</div>
+		);
+	}
 }
 
 export default App;

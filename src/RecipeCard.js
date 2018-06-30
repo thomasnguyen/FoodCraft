@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import helper from './helper';
 
-
 class RecipeCard extends Component {
     render(){
         return (
