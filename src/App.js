@@ -5,6 +5,7 @@ import FilterBar from "./FilterBar";
 import RecipeContainer from "./RecipeContainer";
 import data from "./openrecipes1.json";
 import RecipeModal from "./RecipeModal";
+import data_ingredient from "./openingredients.json";
 
 class App extends Component {
 	constructor(props) {

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Bread",
+        "color":"brown",
+        "icon": "N/A"
+    },
+
+    {
+        "name": "Chicken",
+        "color":"blue",
+        "icon": "N/A"
+    },
+
+    {
+        "name": "Broccoli",
+        "color":"green",
+        "icon": "N/A"
+    }
+]
