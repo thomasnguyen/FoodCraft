@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Ingredient from "./Ingredient";
+import FilterIngredients from "./FilterIngredients";
 
 class FilterBar extends Component {
 	render() {
@@ -19,7 +20,7 @@ class FilterBar extends Component {
 						type="text"
 						placeholder="Search for ingredient"
 					/>
-					<div>dfs </div>
+					<FilterIngredients />
 				</div>
 
 				<div className="ingredients">

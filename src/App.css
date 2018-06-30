@@ -401,6 +401,32 @@ body{
   color:white;
 }
 
+.FilteredIngredients_Box{
+  width:100%;
+  background:white;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.FilteredIngredients_Box > div {
+  padding:8px;
+  border: 1px solid #E1E4E8;
+  border-bottom: 0px solid white;
+  font-size:14px;
+  color:#1B1F23;
+}
+
+.FilteredIngredients_Box > div:last-of-type {
+  border: 1px solid #E1E4E8;
+
+}
+
+.FilteredIngredients_icon{
+  margin-right:10px;
+  color:gray;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
