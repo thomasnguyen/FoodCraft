@@ -305,6 +305,10 @@ body{
   justify-content: space-between;
 }
 
+.fa-times:hover{
+  cursor: pointer;
+}
+
 .ingredient__tag.blue{
   background: #C0D4FF;
   color: rgb(39, 89, 208);

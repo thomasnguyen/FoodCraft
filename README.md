@@ -28,6 +28,8 @@ npm start
 
 * [React](https://reactjs.org/) - The powerful JS framework. I <3 you FB.
 
+* [FontAwesome](https://fontawesome.com/) - Icons. Easy. Done. 
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/thomasnguyen/development/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
