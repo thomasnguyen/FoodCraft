@@ -19,6 +19,7 @@ class FilterBar extends Component {
 						type="text"
 						placeholder="Search for ingredient"
 					/>
+					<div>dfs </div>
 				</div>
 
 				<div className="ingredients">
