@@ -356,11 +356,13 @@ body{
 }
 
 .RecipeIngredients{
-  margin-top:20px;
+  margin-top:25px;
 }
 
 .Ingredient{
-  margin-top:10px;
+  padding-top:8px;
+  padding-bottom: 8px;
+  border-bottom:1px solid rgb(233, 233, 233);
 }
 
 .full-details{

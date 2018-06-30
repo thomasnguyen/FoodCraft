@@ -13,8 +13,20 @@ class App extends Component {
 			isModalShow: false,
 			recipeModalId: "",
 			recipes: []
-		};
-	}
+    };
+    
+    
+  }
+  
+  componentDidMount(){
+    document.addEventListener("keydown", this.escFunction, false);
+  }
+
+  escFunction = event  =>{
+    if(event.keyCode === 27) {
+      this.setState({ isModalShow: false });
+    }
+  }
 
 	getRecipeFromCookBook(id) {
 		for (var x = 0; x <= data.length; x++) {
