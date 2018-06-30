@@ -32,15 +32,17 @@ class RecipeModal extends React.Component {
 								<div>
 									<RecipeIngredients
 										ingredients={this.props.recipes.ingredients}
-									/>
-								</div>
-								<a href={this.props.recipes.url}>
+                  />
+                  
+                  <a href={this.props.recipes.url}>
 									<button className="full-details">
 										{" "}
 										Go to see full details{" "}
 										<i class="fas fa-external-link-alt" />
 									</button>{" "}
 								</a>
+								</div>
+							
 							</div>
 						</div>
 					</section>
