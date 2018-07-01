@@ -14,10 +14,28 @@ class FilterBar extends Component {
 				
 			],
 
-			searchedIngredient: [ 
-				"Chicken", "Broccolie"
-			]
+			searchedIngredient: []
 		};
+	}
+
+	getObject = (ingredient) => {
+		for (var z = 0; z < data_ingredient.length; z++){
+			if (data_ingredient[z].name === ingredient){
+				return data_ingredient[z];
+			}
+		} 
+	}
+
+	addIngredient = (ingredient) => {
+		let ingred = this.getObject(ingredient);
+		this.setState({
+			searchedIngredient: [...this.state.searchedIngredient, ingred],
+			query: " ",
+			searchAuto: []
+		});
+		this.search.value = "";
+        document.getElementById("ingredient-search").focus();
+
 	}
 	
     getInfo = () => {
@@ -48,16 +66,17 @@ class FilterBar extends Component {
 						/>
 					</a>
 					<input
+					    id = "ingredient-search"
 						className="SearchBar"
 						type="text"
 						placeholder="Search for ingredient"
 						ref = {input => this.search = input}
-
 						onChange = {this.searchHandle}
 
 					/>
 					<FilterIngredients 
-									data_ingredient = {this.state.searchAuto} />
+									data_ingredient = {this.state.searchAuto}
+									addIngredient   = {this.addIngredient} />
 				</div>
 
 				<div className="ingredients">

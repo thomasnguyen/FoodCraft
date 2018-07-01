@@ -427,6 +427,18 @@ body{
   color:gray;
 }
 
+.FilteredIngredients_Box > div:hover{
+  cursor:pointer;
+  border:1px solid #8DBA26;
+  background:#8DBA26;
+  color: white;
+}
+
+.FilteredIngredients_Box > div:hover > .FilteredIngredients_icon{
+  color:white;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
