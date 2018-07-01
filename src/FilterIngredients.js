@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
-class Ingredient extends Component {
+class FilterIngredients extends Component {
     render(){
+        let searchResults = this.props.data_ingredient.map((ingredient) => 
+                <div key = {ingredient.name}> <i className="fas fa-lemon FilteredIngredients_icon"></i>{ingredient.name} </div>
+        );
+
         return (
-           <div className = "FilteredIngredients_Box">
-               <div> <i class="fas fa-lemon FilteredIngredients_icon"></i>Bread </div>
-               <div> <i class="fas fa-lemon FilteredIngredients_icon"></i>Chicken </div>
-               <div> <i class="fas fa-lemon FilteredIngredients_icon"></i>Broccoli </div>
+            <div className = "FilteredIngredients_Box">
+                {searchResults}
            </div>
         );
     }
 }
 
-export default Ingredient;
+export default FilterIngredients;

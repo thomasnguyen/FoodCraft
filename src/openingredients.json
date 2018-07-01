@@ -1,18 +1,18 @@
 [
     {
-        "name": "Bread",
+        "name": "bread",
         "color":"brown",
         "icon": "N/A"
     },
 
     {
-        "name": "Chicken",
+        "name": "chicken",
         "color":"blue",
         "icon": "N/A"
     },
 
     {
-        "name": "Broccoli",
+        "name": "broccoli",
         "color":"green",
         "icon": "N/A"
     }

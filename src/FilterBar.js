@@ -2,8 +2,40 @@ import React, { Component } from "react";
 
 import Ingredient from "./Ingredient";
 import FilterIngredients from "./FilterIngredients";
+import data_ingredient from "./openingredients.json";
+
 
 class FilterBar extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			query: " ",
+			searchAuto: [ 
+				
+			],
+
+			searchedIngredient: [ 
+				"Chicken", "Broccolie"
+			]
+		};
+	}
+	
+    getInfo = () => {
+		console.log("QUERY:" + this.state.query);
+		let array = [];
+		for (var x = 0; x < data_ingredient.length; x++){
+			if ((data_ingredient[x].name.includes(this.search.value)) && (this.search.value.length > 0)  ){
+				array.push(data_ingredient[x]);
+			}
+		}
+		this.setState({searchAuto:array});
+
+	}
+	searchHandle = () => {
+		console.log(this.search.value);
+		this.setState({query: this.search.value, searchAuto: []});
+		this.getInfo();
+	}
 	render() {
 		return (
 			<div className="FilterBar">
@@ -19,8 +51,13 @@ class FilterBar extends Component {
 						className="SearchBar"
 						type="text"
 						placeholder="Search for ingredient"
+						ref = {input => this.search = input}
+
+						onChange = {this.searchHandle}
+
 					/>
-					<FilterIngredients />
+					<FilterIngredients 
+									data_ingredient = {this.state.searchAuto} />
 				</div>
 
 				<div className="ingredients">
