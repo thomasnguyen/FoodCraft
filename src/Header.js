@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import images from './images/logo.png';
 
 class Header extends Component {
-    handleSearch = () => {
-        console.log(this.globalSearch.value);
-        this.props.handleGlobalSearch(this.globalSearch.value.toLowerCase());
+    componentDidMount(){
+        document.addEventListener("keydown", this.handleSearch, false);
+      }
+    handleSearch = (event) => {
+        if(event.keyCode === 13) {
+            this.props.handleGlobalSearch(this.globalSearch.value.toLowerCase());
+            this.globalSearch.value = "";
+        }
     }
     render(){
         return(

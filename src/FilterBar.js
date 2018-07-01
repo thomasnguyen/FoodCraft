@@ -42,7 +42,6 @@ class FilterBar extends Component {
 	}
 	
     getInfo = () => {
-		console.log("QUERY:" + this.state.query);
 		let array = [];
 		for (var x = 0; x < data_ingredient.length; x++){
 			if ((data_ingredient[x].name.includes(this.search.value)) && (this.search.value.length > 0)  ){

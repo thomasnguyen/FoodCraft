@@ -54,8 +54,6 @@ class App extends Component {
 				recipes.push(data[y]);
 			}
 		}
-		console.log(query);
-		console.log(data);
 		this.setState({recipes});
 	}
 	render() {
