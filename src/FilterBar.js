@@ -37,6 +37,12 @@ class FilterBar extends Component {
         document.getElementById("ingredient-search").focus();
 
 	}
+
+	deleteIngredient = (index) => {
+		let array = [...this.state.searchedIngredient];
+		array.splice(index,1);
+		this.setState({searchedIngredient: array});
+	}
 	
     getInfo = () => {
 		console.log("QUERY:" + this.state.query);
@@ -85,7 +91,9 @@ class FilterBar extends Component {
 					</div>
 
 				 
-				<IngredientContainer ingredients = {this.state.searchedIngredient} />
+				<IngredientContainer 
+					deleteIngredient = {this.deleteIngredient}
+					ingredients = {this.state.searchedIngredient} />
 				</div>
 			</div>
 		);

@@ -6,8 +6,11 @@ import Ingredient from "./Ingredient";
 class IngredientContainer extends Component {
 
     render(){
-        let allIngredients = this.props.ingredients.map((ingredient) => 
-            <Ingredient key = {ingredient.name} color = {ingredient.color} name = {ingredient.name} />
+        let allIngredients = this.props.ingredients.map((ingredient,index) => 
+            <Ingredient key = {index} 
+                        color = {ingredient.color} 
+                        deleteIngredient = {this.props.deleteIngredient}
+                        name = {ingredient.name} />
         );
         return (
             <div>
