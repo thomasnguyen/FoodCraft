@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import Ingredient from "./Ingredient";
 import FilterIngredients from "./FilterIngredients";
+import IngredientContainer from "./IngredientContainer";
 import data_ingredient from "./openingredients.json";
 
 
@@ -84,9 +84,8 @@ class FilterBar extends Component {
 						<p> Ingredients </p>
 					</div>
 
-					<Ingredient color="brown" tag_name="Bread" />
-					<Ingredient color="blue" tag_name="Chicken" />
-					<Ingredient color="green" tag_name="Broccoli" />
+				 
+				<IngredientContainer ingredients = {this.state.searchedIngredient} />
 				</div>
 			</div>
 		);
