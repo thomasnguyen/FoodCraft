@@ -3,7 +3,7 @@ import Header from "./Header";
 import "./App.css";
 import FilterBar from "./FilterBar";
 import RecipeContainer from "./RecipeContainer";
-import data from "./openrecipes1.json";
+import data from "./openrecipes.json";
 import RecipeModal from "./RecipeModal";
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
 		this.state = {
 			isModalShow: false,
 			recipeModalId: "",
-			recipes: []
+			recipes: data,
     };
     
     
@@ -46,15 +46,26 @@ class App extends Component {
 	hideModal = () => {
 		this.setState({ isModalShow: false });
 	};
-
+	
+	handleGlobalSearch = (query) => {
+		let recipes = [];
+		for (var y = 0; y < data.length; y++){
+			if (data[y].name.toLowerCase().includes(query)){
+				recipes.push(data[y]);
+			}
+		}
+		console.log(query);
+		console.log(data);
+		this.setState({recipes});
+	}
 	render() {
 		return (
 			<div className="App">
-				<Header />
+				<Header handleGlobalSearch = {this.handleGlobalSearch}/>
 				<div className="content">
 					<FilterBar />
 
-					<RecipeContainer handleOpen={this.showModal} recipes={data} />
+					<RecipeContainer handleOpen={this.showModal} recipes={this.state.recipes} />
 				</div>
 
 				<RecipeModal

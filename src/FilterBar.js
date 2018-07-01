@@ -10,10 +10,7 @@ class FilterBar extends Component {
 		super(props);
 		this.state = {
 			query: " ",
-			searchAuto: [ 
-				
-			],
-
+			searchAuto: [],
 			searchedIngredient: []
 		};
 	}
