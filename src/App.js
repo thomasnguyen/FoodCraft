@@ -41,10 +41,16 @@ class App extends Component {
 			recipeModalId: this.getRecipeFromCookBook(id),
 			isModalShow: true
 		});
+
+		// give body noscroll class
+		let body = document.body;
+		body.classList.add("noscroll");
 	};
 
 	hideModal = () => {
 		this.setState({ isModalShow: false });
+		let body = document.body;
+		body.classList.remove("noscroll");
 	};
 	
 	handleGlobalSearch = (query) => {
