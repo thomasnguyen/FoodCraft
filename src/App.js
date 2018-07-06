@@ -5,6 +5,12 @@ import FilterBar from './FilterBar';
 import RecipeContainer from './RecipeContainer';
 import data from './openrecipes1.json';
 import RecipeModal from './RecipeModal';
+import styled from '../node_modules/styled-components';
+
+const Content = styled('div')`
+	width:100%;
+	display:flex;
+`;
 
 class App extends Component {
 	constructor(props) {
@@ -64,11 +70,11 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Header handleGlobalSearch={this.handleGlobalSearch} />
-				<div className="content">
+				<Content>
 					<FilterBar />
 
 					<RecipeContainer handleOpen={this.showModal} recipes={this.state.recipes} />
-				</div>
+				</Content>
 
 				<RecipeModal
 					recipes={this.state.recipeModalId}

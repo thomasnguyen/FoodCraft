@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import RecipeCard from './RecipeCard';
 import helpers from './helper';
+import styled from '../node_modules/styled-components';
+
+const Container = styled('div')`
+	flex:8;
+
+	padding:20px;
+	display:flex;
+	flex-wrap: wrap;
+`;
 
 class RecipeContainer extends Component {
 	render() {
@@ -18,7 +27,7 @@ class RecipeContainer extends Component {
 				handleOpen={this.props.handleOpen}
 			/>
 		));
-		return <div className="RecipeContainer">{recipeArray}</div>;
+		return <Container>{recipeArray}</Container>;
 	}
 }
 
