@@ -7,6 +7,7 @@ const Content = styled('div')`
 	display:flex;
 	flex-direction:column;
 	flex:8;
+	padding-bottom:100px;
 `;
 const Container = styled('div')`
 	flex:8;
@@ -14,13 +15,33 @@ const Container = styled('div')`
 	padding:20px;
 	display:flex;
 	flex-wrap: wrap;
+	margin-bottom:100px;
+
 `;
 
 const MoreButton = styled('button')`
+	display: block;
 	width:100%;
-	padding: 15px 12px;
-	background:gray;
-	margin:auto;
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 15px 12px;
+	font-size: 16px;
+	font-weight:500;
+	box-sizing: border-box;
+	background:rgba(0,0,0,0.3);
+	border:0px;
+	border-radius:5px;
+	color:white;
+
+	&:hover{
+		cursor:pointer;
+		background:rgba(0,0,0,0.35);
+
+	}
+
+	&:focus {outline:none;box-shadow:none;
+		border-color:transparent;}
+
 `;
 
 class RecipeContainer extends Component {
@@ -42,7 +63,7 @@ class RecipeContainer extends Component {
 		return (
 			<Content>
 				<Container>{recipeArray}</Container>
-				<MoreButton> lol </MoreButton>
+				<MoreButton> Load more... </MoreButton>
 			</Content>
 		);
 	}
