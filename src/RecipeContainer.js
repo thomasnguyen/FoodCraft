@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 import RecipeCard from './RecipeCard';
 import helpers from './helper';
-import styled from '../node_modules/styled-components';
+import styled from 'styled-components';
 
+const Content = styled('div')`
+	display:flex;
+	flex-direction:column;
+	flex:8;
+`;
 const Container = styled('div')`
 	flex:8;
-
+	justify-content:space-between;
 	padding:20px;
 	display:flex;
 	flex-wrap: wrap;
+`;
+
+const MoreButton = styled('button')`
+	width:100%;
+	padding: 15px 12px;
+	background:gray;
+	margin:auto;
 `;
 
 class RecipeContainer extends Component {
@@ -27,7 +39,12 @@ class RecipeContainer extends Component {
 				handleOpen={this.props.handleOpen}
 			/>
 		));
-		return <Container>{recipeArray}</Container>;
+		return (
+			<Content>
+				<Container>{recipeArray}</Container>
+				<MoreButton> lol </MoreButton>
+			</Content>
+		);
 	}
 }
 

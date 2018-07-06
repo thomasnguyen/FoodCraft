@@ -24,7 +24,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		let shorten = this.state.recipes.slice(0, 36);
+		let shorten = this.state.recipes.slice(0, this.state.showItems);
 		this.setState({ recipes: shorten });
 		document.addEventListener('keydown', this.escFunction, false);
 	}

@@ -5,7 +5,6 @@ import styled from '../node_modules/styled-components';
 const Container = styled('div')`
     width: 100%;
     background: #24292e;
-    padding-left: 20px;
     color: white;
     height: 55px;
     line-height: 55px;
@@ -21,11 +20,11 @@ const LogoImage = styled('img')`
     width: 35px;
     position: relative;
     top: 9px;
-    margin-right: 5px;
 `;
 
 const LogoText = styled('span')`
-    font-size: 18px;
+	font-size: 18px;
+	padding-left:5px;
 `;
 
 const SearchBar = styled('input')`
@@ -57,7 +56,7 @@ const SearchBar = styled('input')`
 `;
 
 const Search = styled('div')`
-	margin-left: 165px;
+	padding-left: 165px;
 `;
 
 class Header extends Component {
