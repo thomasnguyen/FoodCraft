@@ -16,7 +16,9 @@ class RecipeIngredients extends Component {
 		let ingredientsSection;
 		let ingredientsArray = helper.splitIngredient(this.props.ingredients);
 		if (ingredientsArray !== undefined) {
-			ingredientsSection = ingredientsArray.map((ingredient) => <Ingredient> {ingredient}</Ingredient>);
+			ingredientsSection = ingredientsArray.map((ingredient, index) => (
+				<Ingredient key={index}> {ingredient}</Ingredient>
+			));
 		}
 		return (
 			<RecipeIngredient>

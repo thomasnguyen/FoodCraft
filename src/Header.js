@@ -24,7 +24,7 @@ const LogoImage = styled('img')`
 
 const LogoText = styled('span')`
 	font-size: 18px;
-	padding-left:5px;
+	padding-left:5px;	
 `;
 
 const SearchBar = styled('input')`

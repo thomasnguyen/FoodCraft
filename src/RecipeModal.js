@@ -80,7 +80,21 @@ const ModalDisplay = styled('div')`
 	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
-	display: ${(props) => (props.display ? 'block' : 'none')}
+	display: ${(props) => (props.display === 'true' ? 'block' : 'none')}
+`;
+
+const FullDetails = styled('button')`
+	width: 510px;
+	margin-top: 25px;
+	height: 50px;
+	background: #8dba26;
+	border: 0 solid #000;
+	position: absolute;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 5px;
+	outline-color: transparent;
+	outline-style: none;
 `;
 
 class RecipeModal extends React.Component {
@@ -91,7 +105,7 @@ class RecipeModal extends React.Component {
 
 		return (
 			<div>
-				<ModalDisplay display={this.props.show}>
+				<ModalDisplay display={this.props.show.toString()}>
 					<Exit onClick={this.props.handleClose}>
 						<i className="fas fa-times" />
 					</Exit>
@@ -124,10 +138,10 @@ class RecipeModal extends React.Component {
 									<RecipeIngredients ingredients={this.props.recipes.ingredients} />
 
 									<a href={this.props.recipes.url}>
-										<button className="full-details">
+										<FullDetails>
 											{' '}
 											Go to see full details <i className="fas fa-external-link-alt" />
-										</button>{' '}
+										</FullDetails>{' '}
 									</a>
 								</div>
 							</Recipe>

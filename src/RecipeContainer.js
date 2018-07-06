@@ -63,7 +63,7 @@ class RecipeContainer extends Component {
 		return (
 			<Content>
 				<Container>{recipeArray}</Container>
-				<MoreButton> Load more... </MoreButton>
+				<MoreButton onClick={() => this.props.loadMore()}> Load more... </MoreButton>
 			</Content>
 		);
 	}

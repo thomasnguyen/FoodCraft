@@ -19,12 +19,12 @@ class App extends Component {
 			isModalShow: false,
 			recipeModalId: '',
 			recipes: data,
-			showItems: 36
+			showItems: 18
 		};
 	}
 
 	componentDidMount() {
-		let shorten = this.state.recipes.slice(0, this.state.showItems);
+		let shorten = data.slice(0, this.state.showItems);
 		this.setState({ recipes: shorten });
 		document.addEventListener('keydown', this.escFunction, false);
 	}
@@ -69,6 +69,17 @@ class App extends Component {
 		}
 		this.setState({ recipes });
 	};
+
+	updateData = () => {
+		let shorten = data.slice(0, this.state.showItems);
+		this.setState({ recipes: shorten });
+		console.log('lol');
+	};
+
+	loadMore = () => {
+		this.setState({ showItems: this.state.showItems + 18 });
+		this.updateData();
+	};
 	render() {
 		return (
 			<div className="App">
@@ -76,7 +87,11 @@ class App extends Component {
 				<Content>
 					<FilterBar />
 
-					<RecipeContainer handleOpen={this.showModal} recipes={this.state.recipes} />
+					<RecipeContainer
+						handleOpen={this.showModal}
+						loadMore={this.loadMore}
+						recipes={this.state.recipes}
+					/>
 				</Content>
 
 				<RecipeModal
