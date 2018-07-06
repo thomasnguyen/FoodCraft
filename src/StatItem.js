@@ -9,15 +9,31 @@ const Item = styled('div')`
     font-size:13px;
 `;
 
+const Stat = styled('div')``;
+
+const Icon = styled('i')`
+    margin-right:5px;
+    color:#B9B9B9;
+`;
+
+const Text = styled('span')`
+    color:#4E4A4E;
+`;
+
+const Description = styled('div')`
+    font-size:10px;
+    margin-top:2px;
+`;
+
 class StatItem extends Component {
 	render() {
 		return (
 			<Item>
-				<div className="quick_stats__number">
-					<i className={`fas ${this.props.icon}`} />
-					<span className="time">{this.props.number}</span>
-				</div>
-				<div className="quick_stats__title">{this.props.measure}</div>
+				<Stat>
+					<Icon className={`fas ${this.props.icon}`} />
+					<Text>{this.props.number}</Text>
+				</Stat>
+				<Description>{this.props.measure}</Description>
 			</Item>
 		);
 	}
