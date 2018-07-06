@@ -47,6 +47,13 @@ const SearchBar = styled('input')`
 
 `;
 
+const SearchIcon = styled('img')`
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: -5px;
+	left: -8px;
+`;
 class FilterBar extends Component {
 	constructor(props) {
 		super(props);
@@ -101,7 +108,7 @@ class FilterBar extends Component {
 			<SideBar>
 				<SearchContainer>
 					<a href="###">
-						<img
+						<SearchIcon
 							className="search-icon"
 							src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
 							alt=""

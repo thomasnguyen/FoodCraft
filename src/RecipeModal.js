@@ -19,8 +19,6 @@ const Container = styled('div')`
 		margin:auto;
     display:flex;
 		justify-content: space-between;
-
-		
 `;
 
 const Exit = styled('div')`
@@ -75,17 +73,25 @@ const Recipe = styled('div')`
 	padding-bottom: 100px;
 `;
 
+const ModalDisplay = styled('div')`
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	display: ${(props) => (props.display ? 'block' : 'none')}
+`;
+
 class RecipeModal extends React.Component {
 	render() {
 		let imageBackground = {
 			backgroundImage: `url(${this.props.recipes.image})`
 		};
 
-		const showHideClassName = this.props.show ? 'modal display-block' : 'modal display-none';
-
 		return (
 			<div>
-				<div className={`${showHideClassName} fadeInUp animated`}>
+				<ModalDisplay display={this.props.show}>
 					<Exit onClick={this.props.handleClose}>
 						<i className="fas fa-times" />
 					</Exit>
@@ -127,7 +133,7 @@ class RecipeModal extends React.Component {
 							</Recipe>
 						</Background>
 					</Content>
-				</div>
+				</ModalDisplay>
 			</div>
 		);
 	}
