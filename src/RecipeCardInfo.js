@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
 import helper from './helper';
+import StatItem from './StatItem';
 
 import styled from 'styled-components';
+
+// RecipeCard__info
+const Container = styled('div')`
+    display:flex;
+    justify-content: space-between;
+`;
 
 class RecipeCardInfo extends Component {
 	render() {
 		return (
-			<div className="RecipeCard__info">
-				<div className="quick_stats">
-					<div className="quick_stats__number">
-						<i className="fas fa-stroopwafel" />
-						<span className="time">{helper.calcIngredient(this.props.ingredients)} </span>
-					</div>
-					<div className="quick_stats__title">Ingredients</div>
-				</div>
-				<div className="quick_stats">
-					<div className="quick_stats__number">
-						<i className="fas fa-utensils" />
-						<span className="time">{`${helper.formatTime(this.props.cook_time)}`} </span>
-					</div>
-					<div className="quick_stats__title">Cook Time</div>
-				</div>
-				<div className="quick_stats">
-					<div className="quick_stats__number">
-						<i className="fas fa-clock" />
-						<span className="time">{`${helper.formatTime(this.props.prep_time)}`} </span>
-					</div>
-					<div className="quick_stats__title">Prep Time</div>
-				</div>
-			</div>
+			<Container>
+				<StatItem
+					icon="fa-stroopwafel"
+					number={helper.calcIngredient(this.props.ingredients)}
+					measure="Ingredients"
+				/>
+				<StatItem
+					icon="fa-utensils"
+					number={`${helper.formatTime(this.props.cook_time)}`}
+					measure="Cook Time"
+				/>
+				<StatItem icon="fa-clock" number={`${helper.formatTime(this.props.prep_time)}`} measure="Prep Time" />
+			</Container>
 		);
 	}
 }
