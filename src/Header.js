@@ -56,6 +56,10 @@ const SearchBar = styled('input')`
 	border: 0px solid black;
 `;
 
+const Search = styled('div')`
+	margin-left: 165px;
+`;
+
 class Header extends Component {
 	componentDidMount() {
 		document.addEventListener('keydown', this.handleSearch, false);
@@ -77,14 +81,14 @@ class Header extends Component {
 							<b>Food</b>Craft{' '}
 						</LogoText>
 					</Logo>
-					<div className="Header__search">
+					<Search>
 						<SearchBar
 							innerRef={(input) => (this.globalSearch = input)}
 							onChange={this.handleSearch}
 							type="text"
 							laceholder="Global search...."
 						/>
-					</div>
+					</Search>
 				</FlexContainer>
 			</Container>
 		);
