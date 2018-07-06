@@ -43,14 +43,32 @@ const Description = styled('footer')`
 
 `;
 
+const Name = styled('div')`
+    position: absolute;
+    top:190px;
+    line-height:28px;
+    text-align: left;
+    left:20px;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0,0,0,1);
+`;
+
+const Image = styled('img')`
+    width:300px;
+    height:255px;
+    border-radius:10px 10px 0px 0px;
+    object-fit: cover;
+`;
+
 class RecipeCard extends Component {
 	render() {
 		return (
 			<Card onClick={() => this.props.handleOpen(this.props.title)}>
 				<Title>
 					<RecipePercentage>{this.props.percent}</RecipePercentage>
-					<div className="RecipeCard__title_title">{this.props.title}</div>
-					<img className="RecipeCard__title_image" src={this.props.image} alt="" />
+					<Name>{this.props.title}</Name>
+					<Image src={this.props.image} alt={this.props.title} />
 				</Title>
 
 				<Description>
