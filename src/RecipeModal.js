@@ -6,13 +6,73 @@ import StatItem from './StatItem';
 import helpers from './helper';
 
 const Title = styled('h4')`
-	line-height:2;
+	line-height:2.5;
+	margin: 0px;
+	font-weight: 500;
+	text-align: center;
+	font-size: 24px;
+	color: #393a44;
+	text-align: center;
 `;
 const Container = styled('div')`
 		width: 70%;
 		margin:auto;
     display:flex;
-    justify-content: space-between;
+		justify-content: space-between;
+
+		
+`;
+
+const Exit = styled('div')`
+	position: fixed;
+	font-size: 30px;
+	z-index: 10;
+	right: 50px;
+	top: 20px;
+	color: rgb(203, 203, 203);
+
+	&:hover{
+		color: white;
+	}
+`;
+
+const BlackOverlay = styled('div')`
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+`;
+
+const Content = styled('section')`
+	position: absolute;
+	background: white;
+	width: 600px;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+`;
+
+const Background = styled('div')`
+	background: white;
+	width: 100%;
+
+	background-color: rgb(227, 227, 227);
+	background-repeat: no-repeat;
+	padding-bottom: 300px;
+`;
+
+const Recipe = styled('div')`
+	padding: 25px;
+	position: relative;
+	height: auto;
+	top: 250px;
+	margin-bottom: 1250px;
+	width: 85%;
+	background: white;
+	margin: auto;
+	padding-bottom: 100px;
 `;
 
 class RecipeModal extends React.Component {
@@ -26,14 +86,14 @@ class RecipeModal extends React.Component {
 		return (
 			<div>
 				<div className={`${showHideClassName} fadeInUp animated`}>
-					<div className="modal_exit" onClick={this.props.handleClose}>
-						<i className="fas fa-times" />f
-					</div>
-					<div className="black_screen" onClick={this.props.handleClose} />
+					<Exit onClick={this.props.handleClose}>
+						<i className="fas fa-times" />
+					</Exit>
+					<BlackOverlay onClick={this.props.handleClose} />
 
-					<section className="modal-main fadeInUp animated">
-						<div className="modal_container" style={imageBackground}>
-							<div className="modal_cover">
+					<Content>
+						<Background style={imageBackground}>
+							<Recipe>
 								<Title>{this.props.recipes.name} </Title>
 
 								<Container>
@@ -64,9 +124,9 @@ class RecipeModal extends React.Component {
 										</button>{' '}
 									</a>
 								</div>
-							</div>
-						</div>
-					</section>
+							</Recipe>
+						</Background>
+					</Content>
 				</div>
 			</div>
 		);
