@@ -8,7 +8,7 @@ class RecipeModal extends React.Component {
     let imageBackground = {
       backgroundImage:`url(${this.props.recipes.image})`
     }
-
+ 
 
 		const showHideClassName = this.props.show
 			? "modal display-block"
@@ -19,7 +19,7 @@ class RecipeModal extends React.Component {
         <div className={`${showHideClassName} fadeInUp animated`}>
         
           <div className = "modal_exit" onClick={this.props.handleClose} > 
-            <i className="fas fa-times"></i>
+            <i className="fas fa-times"></i>f
           </div>
           <div className="black_screen" onClick={this.props.handleClose} />
           
