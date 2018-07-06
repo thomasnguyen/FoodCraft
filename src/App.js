@@ -3,7 +3,7 @@ import Header from './Header';
 import './App.css';
 import FilterBar from './FilterBar';
 import RecipeContainer from './RecipeContainer';
-import data from './openrecipes1.json';
+import data from './openrecipes.json';
 import RecipeModal from './RecipeModal';
 import styled from '../node_modules/styled-components';
 
@@ -18,11 +18,14 @@ class App extends Component {
 		this.state = {
 			isModalShow: false,
 			recipeModalId: '',
-			recipes: data
+			recipes: data,
+			showItems: 36
 		};
 	}
 
 	componentDidMount() {
+		let shorten = this.state.recipes.slice(0, 36);
+		this.setState({ recipes: shorten });
 		document.addEventListener('keydown', this.escFunction, false);
 	}
 
