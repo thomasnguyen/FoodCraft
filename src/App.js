@@ -3,7 +3,7 @@ import Header from "./Header";
 import "./App.css";
 import FilterBar from "./FilterBar";
 import RecipeContainer from "./RecipeContainer";
-import data from "./openrecipes.json";
+import data from "./openrecipes1.json";
 import RecipeModal from "./RecipeModal";
 
 class App extends Component {
