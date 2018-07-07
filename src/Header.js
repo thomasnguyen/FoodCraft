@@ -19,12 +19,13 @@ const Logo = styled('div')``;
 const LogoImage = styled('img')`
     width: 35px;
     position: relative;
-    top: 9px;
+	top: 9px;
+	left:20px;
 `;
 
 const LogoText = styled('span')`
 	font-size: 18px;
-	padding-left:5px;	
+	padding-left:25px;	
 `;
 
 const SearchBar = styled('input')`
