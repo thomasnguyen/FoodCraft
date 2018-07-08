@@ -5,6 +5,8 @@ import IngredientContainer from './IngredientContainer';
 import data_ingredient from './openingredients.json';
 import styled from '../node_modules/styled-components';
 
+import MobileFilter from './MobileFilter';
+
 const SideBar = styled('div')`
 	width: 240px;
 	padding: 20px;
@@ -109,36 +111,39 @@ class FilterBar extends Component {
 	};
 	render() {
 		return (
-			<SideBar>
-				<SearchContainer>
-					<a href="###">
-						<SearchIcon
-							className="search-icon"
-							src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-							alt=""
+			<div>
+				<MobileFilter />
+				<SideBar>
+					<SearchContainer>
+						<a href="###">
+							<SearchIcon
+								className="search-icon"
+								src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
+								alt=""
+							/>
+						</a>
+						<SearchBar
+							id="ingredient-search"
+							type="text"
+							placeholder="Search for ingredient"
+							innerRef={(input) => (this.search = input)}
+							onChange={this.searchHandle}
 						/>
-					</a>
-					<SearchBar
-						id="ingredient-search"
-						type="text"
-						placeholder="Search for ingredient"
-						innerRef={(input) => (this.search = input)}
-						onChange={this.searchHandle}
-					/>
-					<FilterIngredients data_ingredient={this.state.searchAuto} addIngredient={this.addIngredient} />
-				</SearchContainer>
+						<FilterIngredients data_ingredient={this.state.searchAuto} addIngredient={this.addIngredient} />
+					</SearchContainer>
 
-				<div>
-					<Header>
-						<p> Ingredients </p>
-					</Header>
+					<div>
+						<Header>
+							<p> Ingredients </p>
+						</Header>
 
-					<IngredientContainer
-						deleteIngredient={this.deleteIngredient}
-						ingredients={this.state.searchedIngredient}
-					/>
-				</div>
-			</SideBar>
+						<IngredientContainer
+							deleteIngredient={this.deleteIngredient}
+							ingredients={this.state.searchedIngredient}
+						/>
+					</div>
+				</SideBar>
+			</div>
 		);
 	}
 }
