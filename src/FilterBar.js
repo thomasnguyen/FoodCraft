@@ -7,6 +7,9 @@ import styled from '../node_modules/styled-components';
 
 import MobileFilter from './MobileFilter';
 
+const Wrapper = styled('div')`
+`;
+
 const SideBar = styled('div')`
 	width: 240px;
 	padding: 20px;
@@ -51,6 +54,13 @@ const SearchBar = styled('input')`
 
 	width: calc(100% - 40px);
 
+`;
+
+const MobileWrapper = styled('div')`
+	display:none;
+	@media (max-width: 1300px){
+		display:block;
+	}
 `;
 
 const SearchIcon = styled('img')`
@@ -111,8 +121,10 @@ class FilterBar extends Component {
 	};
 	render() {
 		return (
-			<div>
-				<MobileFilter />
+			<Wrapper>
+				<MobileWrapper>
+					<MobileFilter />
+				</MobileWrapper>
 				<SideBar>
 					<SearchContainer>
 						<a href="###">
@@ -143,7 +155,7 @@ class FilterBar extends Component {
 						/>
 					</div>
 				</SideBar>
-			</div>
+			</Wrapper>
 		);
 	}
 }

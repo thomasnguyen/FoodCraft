@@ -10,6 +10,11 @@ import styled from '../node_modules/styled-components';
 const Content = styled('div')`
 	width:100%;
 	display:flex;
+	flex-direction:row;
+
+	@media (max-width: 1300px){
+		flex-direction:column;
+	}
 `;
 
 class App extends Component {
