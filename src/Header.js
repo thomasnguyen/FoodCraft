@@ -37,10 +37,9 @@ const SearchBar = styled('input')`
     color: #181818;
     letter-spacing: 0;
     text-align: left;
-    opacity: 0.57;
 
-    padding: 10px;
-    padding-left: 30px;
+	padding: 10px;
+	padding-left:15px;
 
     outline-color: transparent;
     outline-style: none;
@@ -50,10 +49,14 @@ const SearchBar = styled('input')`
 
     margin-top: 10px;
 	font-size: 12px;
-	color: white;
+	color: rgba(255,255,255,0.8);
 	width: 300px;
 	background: #404448;
 	border: 0px solid black;
+
+	&::placeholder{
+		color:rgba(255,255,255,0.4);
+	}
 `;
 
 const Search = styled('div')`
@@ -86,7 +89,7 @@ class Header extends Component {
 							innerRef={(input) => (this.globalSearch = input)}
 							onChange={this.handleSearch}
 							type="text"
-							laceholder="Global search...."
+							placeholder="Filter Recipes"
 						/>
 					</Search>
 				</FlexContainer>

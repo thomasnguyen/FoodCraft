@@ -8,6 +8,10 @@ import styled from '../node_modules/styled-components';
 const SideBar = styled('div')`
 	width: 240px;
 	padding: 20px;
+
+	@media (max-width: 1300px){
+		display:none;
+	}
 `;
 
 const SearchContainer = styled('div')`

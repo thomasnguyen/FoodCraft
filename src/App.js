@@ -71,14 +71,16 @@ class App extends Component {
 	};
 
 	updateData = () => {
+		console.log(this.state.showItems);
 		let shorten = data.slice(0, this.state.showItems);
 		this.setState({ recipes: shorten });
-		console.log('lol');
 	};
 
 	loadMore = () => {
-		this.setState({ showItems: this.state.showItems + 18 });
-		this.updateData();
+		let newLimit = this.state.showItems + 18;
+		this.setState({ showItems: newLimit });
+		let shorten = data.slice(0, newLimit);
+		this.setState({ recipes: shorten });
 	};
 	render() {
 		return (

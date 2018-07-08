@@ -115,7 +115,6 @@ class RecipeModal extends React.Component {
 						<Background style={imageBackground}>
 							<Recipe>
 								<Title>{this.props.recipes.name} </Title>
-
 								<Container>
 									<StatItem
 										icon="fa-stroopwafel"
@@ -133,10 +132,8 @@ class RecipeModal extends React.Component {
 										measure="Prep Time"
 									/>
 								</Container>
-
 								<div>
 									<RecipeIngredients ingredients={this.props.recipes.ingredients} />
-
 									<a href={this.props.recipes.url}>
 										<FullDetails>
 											{' '}
