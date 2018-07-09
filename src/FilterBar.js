@@ -75,8 +75,7 @@ class FilterBar extends Component {
 		super(props);
 		this.state = {
 			query: ' ',
-			searchAuto: [],
-			searchedIngredient: []
+			searchAuto: []
 		};
 	}
 
@@ -90,8 +89,8 @@ class FilterBar extends Component {
 
 	addIngredient = (ingredient) => {
 		let ingred = this.getObject(ingredient);
+		this.props.addIngredient(ingred);
 		this.setState({
-			searchedIngredient: [ ...this.state.searchedIngredient, ingred ],
 			query: ' ',
 			searchAuto: []
 		});
@@ -151,7 +150,7 @@ class FilterBar extends Component {
 
 						<IngredientContainer
 							deleteIngredient={this.deleteIngredient}
-							ingredients={this.state.searchedIngredient}
+							ingredients={this.props.searchedIngredients}
 						/>
 					</div>
 				</SideBar>

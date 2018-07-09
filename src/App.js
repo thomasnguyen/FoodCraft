@@ -25,7 +25,7 @@ class App extends Component {
 			recipeModalId: '',
 			recipes: data,
 			showItems: 18,
-			searchIngredients: [ 'chicken' ]
+			searchIngredients: []
 		};
 	}
 
@@ -88,12 +88,32 @@ class App extends Component {
 		let shorten = data.slice(0, newLimit);
 		this.setState({ recipes: shorten });
 	};
+
+	addIngredient = (ingredient) => {
+		console.log(ingredient);
+
+		/*
+		if (this.state.searchIngredients.length > 0) {
+			this.setState({
+				searchIngredients: [ ...this.state.searchIngredients, ingredient ]
+			});
+		} else {
+			let newArray = [];
+			newArray = newArray.push(ingredient);
+			this.setState({ searchIngredients: newArray });
+		}
+        */
+		this.setState({
+			searchIngredients: [ ...this.state.searchIngredients, ingredient ]
+		});
+		console.log(this.state.searchIngredients);
+	};
 	render() {
 		return (
 			<div className="App">
 				<Header handleGlobalSearch={this.handleGlobalSearch} />
 				<Content>
-					<FilterBar searchIngredients={this.state.searchIngredients} />
+					<FilterBar addIngredient={this.addIngredient} searchIngredients={this.state.searchIngredients} />
 
 					<RecipeContainer
 						searchIngredients={this.state.searchIngredients}

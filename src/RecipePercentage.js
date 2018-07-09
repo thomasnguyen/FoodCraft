@@ -25,7 +25,7 @@ class RecipePercentage extends Component {
 	render() {
 		let isDisplayed;
 		if (this.props.searchIngredients) {
-			isDisplayed = 'blofck';
+			isDisplayed = 'block';
 		} else {
 			isDisplayed = 'none';
 		}
