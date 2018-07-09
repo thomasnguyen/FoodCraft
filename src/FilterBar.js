@@ -99,9 +99,10 @@ class FilterBar extends Component {
 	};
 
 	deleteIngredient = (index) => {
-		let array = [ ...this.state.searchedIngredient ];
+		console.log(this.props.searchIngredients);
+		let array = [ ...this.props.searchIngredients ];
 		array.splice(index, 1);
-		this.setState({ searchedIngredient: array });
+		this.props.deleteIngredient(array);
 	};
 
 	getInfo = () => {
@@ -150,7 +151,7 @@ class FilterBar extends Component {
 
 						<IngredientContainer
 							deleteIngredient={this.deleteIngredient}
-							ingredients={this.props.searchedIngredients}
+							ingredients={this.props.searchIngredients}
 						/>
 					</div>
 				</SideBar>

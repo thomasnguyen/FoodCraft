@@ -91,29 +91,27 @@ class App extends Component {
 
 	addIngredient = (ingredient) => {
 		console.log(ingredient);
-
-		/*
-		if (this.state.searchIngredients.length > 0) {
-			this.setState({
-				searchIngredients: [ ...this.state.searchIngredients, ingredient ]
-			});
-		} else {
-			let newArray = [];
-			newArray = newArray.push(ingredient);
-			this.setState({ searchIngredients: newArray });
-		}
-        */
 		this.setState({
 			searchIngredients: [ ...this.state.searchIngredients, ingredient ]
 		});
 		console.log(this.state.searchIngredients);
+	};
+
+	deleteIngredient = (array) => {
+		this.setState({
+			searchIngredients: array
+		});
 	};
 	render() {
 		return (
 			<div className="App">
 				<Header handleGlobalSearch={this.handleGlobalSearch} />
 				<Content>
-					<FilterBar addIngredient={this.addIngredient} searchIngredients={this.state.searchIngredients} />
+					<FilterBar
+						addIngredient={this.addIngredient}
+						deleteIngredient={this.deleteIngredient}
+						searchIngredients={this.state.searchIngredients}
+					/>
 
 					<RecipeContainer
 						searchIngredients={this.state.searchIngredients}
