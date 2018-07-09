@@ -24,7 +24,8 @@ class App extends Component {
 			isModalShow: false,
 			recipeModalId: '',
 			recipes: data,
-			showItems: 18
+			showItems: 18,
+			searchIngredients: [ 'chicken' ]
 		};
 	}
 
@@ -92,9 +93,10 @@ class App extends Component {
 			<div className="App">
 				<Header handleGlobalSearch={this.handleGlobalSearch} />
 				<Content>
-					<FilterBar />
+					<FilterBar searchIngredients={this.state.searchIngredients} />
 
 					<RecipeContainer
+						searchIngredients={this.state.searchIngredients}
 						handleOpen={this.showModal}
 						loadMore={this.loadMore}
 						recipes={this.state.recipes}

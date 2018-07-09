@@ -17,7 +17,7 @@ const Title = styled('h4')`
 const Container = styled('div')`
 		width: 70%;
 		margin:auto;
-    display:flex;
+    	display:flex;
 		justify-content: space-between;
 `;
 

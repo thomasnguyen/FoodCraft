@@ -58,6 +58,7 @@ class RecipeContainer extends Component {
 				recipe_yield={recipe.recipeYield}
 				key={recipe.name + recipe.ingredients}
 				handleOpen={this.props.handleOpen}
+				searchIngredients={this.props.searchIngredients}
 			/>
 		));
 		return (

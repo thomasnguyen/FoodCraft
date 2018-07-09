@@ -66,7 +66,9 @@ class RecipeCard extends Component {
 		return (
 			<Card onClick={() => this.props.handleOpen(this.props.title)}>
 				<Title>
-					<RecipePercentage>{this.props.percent}</RecipePercentage>
+					<RecipePercentage searchIngredients={this.props.searchIngredients}>
+						{this.props.percent}
+					</RecipePercentage>
 					<Name>{this.props.title}</Name>
 					<Image src={this.props.image} alt={this.props.title} />
 				</Title>

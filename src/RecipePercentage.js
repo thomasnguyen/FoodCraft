@@ -17,11 +17,19 @@ const Percentage = styled('div')`
     height:30px;
     background:#8DBA26;
 
+    display: ${(props) => (props.display === 'block' ? 'block' : 'none')};
+
 `;
 
 class RecipePercentage extends Component {
 	render() {
-		return <Percentage>{this.props.children}</Percentage>;
+		let isDisplayed;
+		if (this.props.searchIngredients) {
+			isDisplayed = 'blofck';
+		} else {
+			isDisplayed = 'none';
+		}
+		return <Percentage display={isDisplayed}>{this.props.children}</Percentage>;
 	}
 }
 
