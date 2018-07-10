@@ -70,6 +70,16 @@ const SearchIcon = styled('img')`
 	top: -5px;
 	left: -8px;
 `;
+
+const NoIngredients = styled('div')`
+	width:100%;
+	border: 2px dashed gray;
+	margin-top:15px;
+	text-align:center;
+	padding:50px 0px 50px 0px;
+	display: ${(props) => (props.display > 0 ? 'none' : 'display')};
+
+`;
 class FilterBar extends Component {
 	constructor(props) {
 		super(props);
@@ -148,7 +158,9 @@ class FilterBar extends Component {
 						<Header>
 							<p> Ingredients </p>
 						</Header>
-
+						<NoIngredients display={Number(this.props.searchIngredients.length)}>
+							You have not entered any ingredients. Please use the above searchbar to add.
+						</NoIngredients>
 						<IngredientContainer
 							deleteIngredient={this.deleteIngredient}
 							ingredients={this.props.searchIngredients}
