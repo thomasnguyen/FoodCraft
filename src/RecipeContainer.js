@@ -20,7 +20,7 @@ const Container = styled('div')`
 `;
 
 const MoreButton = styled('button')`
-	display: ${(props) => (props.display ? 'display' : 'none')};
+	display: ${(props) => (props.display.length ? 'display' : 'none')};
 	width:100%;
     max-width: 1470px;
     margin: 0 auto;
@@ -49,7 +49,7 @@ class RecipeContainer extends Component {
 		let recipeArray = this.props.recipes.map((recipe) => (
 			<RecipeCard
 				title={recipe.name}
-				percent={helpers.randomizer()}
+				percent={helpers.percentageCalc(recipe, this.props.searchIngredients)}
 				ingredients={recipe.ingredients}
 				description={recipe.description}
 				image={recipe.image}
@@ -64,7 +64,7 @@ class RecipeContainer extends Component {
 		return (
 			<Content>
 				<Container>{recipeArray}</Container>
-				<MoreButton display={this.props.recipe} onClick={() => this.props.loadMore()}>
+				<MoreButton display={this.props.recipes} onClick={() => this.props.loadMore()}>
 					{' '}
 					Load more...{' '}
 				</MoreButton>

@@ -1,19 +1,25 @@
 [
-    {
-        "name": "bread",
-        "color":"brown",
-        "icon": "N/A"
-    },
+	{
+		"name": "bread",
+		"color": "brown",
+		"icon": "N/A"
+	},
 
-    {
-        "name": "chicken",
-        "color":"blue",
-        "icon": "N/A"
-    },
+	{
+		"name": "chicken",
+		"color": "blue",
+		"icon": "N/A"
+	},
 
-    {
-        "name": "broccoli",
-        "color":"green",
-        "icon": "N/A"
-    }
+	{
+		"name": "broccoli",
+		"color": "green",
+		"icon": "N/A"
+	},
+
+	{
+		"name": "flax seeds",
+		"color": "green",
+		"icon": "N/A"
+	}
 ]

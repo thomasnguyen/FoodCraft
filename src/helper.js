@@ -31,6 +31,19 @@ let helpers = {
 
 	randomizer() {
 		return Math.floor(Math.random() * 100 + 1) + '%';
+	},
+
+	percentageCalc(recipe, ingreidentsList) {
+		let matchingIngredients = 0;
+		let totalIngredients = this.calcIngredient(recipe.ingredients);
+
+		let recipeIngredientsList = recipe.ingredients;
+		ingreidentsList.forEach((ingredient) => {
+			if (recipeIngredientsList.includes(ingredient.name)) {
+				matchingIngredients = matchingIngredients + 1;
+			}
+		});
+		return Math.floor(matchingIngredients / totalIngredients * 100) + '%';
 	}
 };
 
