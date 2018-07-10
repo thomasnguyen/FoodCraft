@@ -20,7 +20,7 @@ const Container = styled('div')`
 `;
 
 const MoreButton = styled('button')`
-	display: block;
+	display: ${(props) => (props.display ? 'display' : 'none')};
 	width:100%;
     max-width: 1470px;
     margin: 0 auto;
@@ -64,7 +64,10 @@ class RecipeContainer extends Component {
 		return (
 			<Content>
 				<Container>{recipeArray}</Container>
-				<MoreButton onClick={() => this.props.loadMore()}> Load more... </MoreButton>
+				<MoreButton display={this.props.recipe} onClick={() => this.props.loadMore()}>
+					{' '}
+					Load more...{' '}
+				</MoreButton>
 			</Content>
 		);
 	}

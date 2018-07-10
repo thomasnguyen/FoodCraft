@@ -56,6 +56,7 @@ const SearchBar = styled('input')`
 
 	&::placeholder{
 		color:rgba(255,255,255,0.4);
+		font-style:italic;
 	}
 `;
 
@@ -89,7 +90,7 @@ class Header extends Component {
 							innerRef={(input) => (this.globalSearch = input)}
 							onChange={this.handleSearch}
 							type="text"
-							placeholder="Filter Recipes"
+							placeholder="Filter Recipes by Keyword"
 						/>
 					</Search>
 				</FlexContainer>
