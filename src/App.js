@@ -6,6 +6,7 @@ import RecipeContainer from './RecipeContainer';
 import data from './openrecipes.json';
 import RecipeModal from './RecipeModal';
 import styled from '../node_modules/styled-components';
+import helpers from './helper';
 
 const Content = styled('div')`
 	width:100%;
@@ -90,11 +91,16 @@ class App extends Component {
 	};
 
 	addIngredient = (ingredient) => {
-		console.log(ingredient);
-		this.setState({
-			searchIngredients: [ ...this.state.searchIngredients, ingredient ]
-		});
-		console.log(this.state.searchIngredients);
+		this.setState(
+			{
+				searchIngredients: [ ...this.state.searchIngredients, ingredient ]
+			},
+			function() {
+				this.setState({
+					recipes: helpers.sortArray(this.state.recipes, this.state.searchIngredients)
+				});
+			}
+		);
 	};
 
 	deleteIngredient = (array) => {

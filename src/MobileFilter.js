@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import helper from './helper.js';
 import styled from '../node_modules/styled-components';
-import FilterBar from './FilterBar.js';
 
 const Wrapper = styled('div')`
 	width:100%;
@@ -45,7 +43,7 @@ class MobileFilter extends Component {
 			<Wrapper>
 				<FilterButton>
 					{' '}
-					<i class="fas fa-filter" /> Apply Filters
+					<i className="fas fa-filter" /> Apply Filters
 				</FilterButton>
 				<FilterWrapper />
 			</Wrapper>
