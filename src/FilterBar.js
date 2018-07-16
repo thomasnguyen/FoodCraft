@@ -80,6 +80,17 @@ const NoIngredients = styled('div')`
 	display: ${(props) => (props.display > 0 ? 'none' : 'display')};
 
 `;
+
+const OtherFilters = styled('div')`
+	display:flex;
+	flex-direction:column;
+`;
+
+const OtherFiltersItems = styled('div')`
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+`;
 class FilterBar extends Component {
 	constructor(props) {
 		super(props);
@@ -165,6 +176,23 @@ class FilterBar extends Component {
 							deleteIngredient={this.deleteIngredient}
 							ingredients={this.props.searchIngredients}
 						/>
+					</div>
+					<div>
+						<Header>
+							<p> Other Filters </p>
+						</Header>
+						<OtherFilters>
+							<OtherFiltersItems>Less than 1 hour prep</OtherFiltersItems>
+							<OtherFiltersItems>Less than 1 hour cooking time</OtherFiltersItems>
+							<OtherFiltersItems>Less than 10 ingredients</OtherFiltersItems>
+							<select>
+								<option>Sort by Match </option>
+								<option>Sort by Alphabetical Order </option>
+								<option>Sort by Prep Time </option>
+								<option>Sort by Cook Time </option>
+								<option>Sort by # of Ingredients </option>
+							</select>
+						</OtherFilters>
 					</div>
 				</SideBar>
 			</Wrapper>
