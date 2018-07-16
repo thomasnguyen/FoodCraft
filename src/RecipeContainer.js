@@ -49,7 +49,7 @@ class RecipeContainer extends Component {
 		let recipeArray = this.props.recipes.map((recipe) => (
 			<RecipeCard
 				title={recipe.name}
-				percent={helpers.percentageCalc(recipe, this.props.searchIngredients)}
+				percent={helpers.percentageCalcDisplay(recipe, this.props.searchIngredients)}
 				ingredients={recipe.ingredients}
 				description={recipe.description}
 				image={recipe.image}

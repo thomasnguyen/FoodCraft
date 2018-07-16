@@ -10,3 +10,7 @@ body {
 	width: 100%;
 	display: flex;
 }
+
+.fas:hover {
+	cursor: pointer;
+}

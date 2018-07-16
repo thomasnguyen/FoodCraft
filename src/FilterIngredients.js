@@ -30,6 +30,7 @@ const Ingredient = styled('div')`
     border-bottom: 0px solid white;
     font-size: 16px;
     color: #1b1f23;
+    text-transform: capitalize;
 
     &:last-of-type{
         border: 1px solid #e1e4e8;

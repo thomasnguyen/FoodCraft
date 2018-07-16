@@ -64,6 +64,22 @@ const Search = styled('div')`
 	padding-left: 165px;
 `;
 
+const MenuLinksContainer = styled('div')`
+	margin-left:20px;
+
+
+	& > a{
+		color:white;
+		text-decoration:none;
+		font-size:14px;
+		font-weight:500;
+	}
+
+	& > a:hover{
+		color:rgba(255,255,255,.7);
+	}
+`;
+
 class Header extends Component {
 	componentDidMount() {
 		document.addEventListener('keydown', this.handleSearch, false);
@@ -93,6 +109,9 @@ class Header extends Component {
 							placeholder="Filter Recipes by Keyword"
 						/>
 					</Search>
+					<MenuLinksContainer>
+						<a href="#">About</a>
+					</MenuLinksContainer>
 				</FlexContainer>
 			</Container>
 		);

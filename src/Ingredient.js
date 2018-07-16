@@ -21,18 +21,18 @@ const Colors = {
 const Tag = styled('div')`
 
     border-radius: 10px;
-    /* Chicken: */
     font-size: 12px;
     letter-spacing: 0;
     text-align: left;
     padding: 10px;
-    font-weight: 500;
+	font-weight: 500;
+	text-transform: capitalize;
 
     margin-bottom: 10px;
 
     display: flex;
     justify-content: space-between;
-
+     
     background: ${(props) => Colors[props.color].background};
     color: ${(props) => Colors[props.color].color};
 `;
