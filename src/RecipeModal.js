@@ -3,6 +3,8 @@ import React from 'react';
 import styled from '../node_modules/styled-components';
 import RecipeIngredients from './RecipeIngredients';
 import StatItem from './StatItem';
+
+import variables from './variables';
 import helpers from './helper';
 
 const Title = styled('h4')`
@@ -87,7 +89,7 @@ const FullDetails = styled('button')`
 	width: 510px;
 	margin-top: 25px;
 	height: 50px;
-	background: #8dba26;
+	background: ${variables.green};
 	border: 0 solid #000;
 	position: absolute;
 	color: #fff;
