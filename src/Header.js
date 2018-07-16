@@ -61,7 +61,7 @@ const SearchBar = styled('input')`
 `;
 
 const Search = styled('div')`
-	padding-left: 165px;
+	padding-left: 15px;
 `;
 
 const MenuLinksContainer = styled('div')`
