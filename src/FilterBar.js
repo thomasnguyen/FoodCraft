@@ -4,6 +4,7 @@ import FilterIngredients from './FilterIngredients';
 import IngredientContainer from './IngredientContainer';
 import data_ingredient from './openingredients.json';
 import styled from '../node_modules/styled-components';
+import NoIngredients from './NoIngredients';
 
 import MobileFilter from './MobileFilter';
 
@@ -69,16 +70,6 @@ const SearchIcon = styled('img')`
 	height: 50px;
 	top: -5px;
 	left: -8px;
-`;
-
-const NoIngredients = styled('div')`
-	width:100%;
-	border: 2px dashed gray;
-	margin-top:15px;
-	text-align:center;
-	padding:50px 0px 50px 0px;
-	display: ${(props) => (props.display > 0 ? 'none' : 'display')};
-
 `;
 
 const OtherFilters = styled('div')`
@@ -169,7 +160,7 @@ class FilterBar extends Component {
 						<Header>
 							<p> Ingredients </p>
 						</Header>
-						<NoIngredients display={Number(this.props.searchIngredients.length)}>
+						<NoIngredients isDisplayed={Number(this.props.searchIngredients.length) <= 0}>
 							You have not entered any ingredients. Please use the above searchbar to add.
 						</NoIngredients>
 						<IngredientContainer
