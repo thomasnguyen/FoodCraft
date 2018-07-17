@@ -3,6 +3,7 @@ import RecipePercentage from './RecipePercentage';
 import RecipeCardInfo from './RecipeCardInfo';
 
 import styled from 'styled-components';
+import variables from './variables';
 
 const Card = styled('article')`
     width:300px;
@@ -31,7 +32,7 @@ const Description = styled('footer')`
     height:35px;
 
     font-size: 14px;
-    color: #7A7A7A;
+    color: ${variables.mainText};
     letter-spacing: 0;
     text-align: left;
 

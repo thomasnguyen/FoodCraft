@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import images from './images/logo.png';
 import styled from '../node_modules/styled-components';
 
+import variables from './variables';
+
 const Container = styled('div')`
     width: 100%;
-    background: #24292e;
+    background: ${variables.headerBG};
     color: white;
     height: 55px;
     line-height: 55px;

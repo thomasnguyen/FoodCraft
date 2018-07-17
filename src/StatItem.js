@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
+import variables from './variables';
 
 const Item = styled('div')`
     margin-right:20px;
@@ -13,16 +14,17 @@ const Stat = styled('div')``;
 
 const Icon = styled('i')`
     margin-right:5px;
-    color:#B9B9B9;
+    color:${variables.lightText};
 `;
 
 const Text = styled('span')`
-    color:#4E4A4E;
+	color:${variables.darkText};
+	font-size:16px;
 `;
 
 const Description = styled('div')`
-    font-size:10px;
-    margin-top:2px;
+    font-size:12px;
+    margin-top:4px;
 `;
 
 class StatItem extends Component {
