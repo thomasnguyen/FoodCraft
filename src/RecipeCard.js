@@ -19,11 +19,19 @@ const Card = styled('article')`
         cursor: pointer;
         filter: brightness(110%);
     }
+
+    @media (max-width: 960px){
+        width:40vw;
+    }
 `;
 
 const Title = styled('header')`
     position:relative;
     height:255px;
+
+    @media (max-width: 960px){
+        height:168px;
+    }
 `;
 
 const Description = styled('footer')`
@@ -36,30 +44,49 @@ const Description = styled('footer')`
     letter-spacing: 0;
     text-align: left;
 
-    padding:15px;
+    padding:12px;
 
 
     box-shadow: 0 3px 2px 0 rgba(0,0,0,0.20);
     border-radius: 0px 0px 5px 5px;
+
+    @media (max-width: 960px){
+        height:55px;
+    }
+    
+
+
 
 `;
 
 const Name = styled('div')`
     position: absolute;
     top:190px;
-    line-height:28px;
+    line-height:1.17;
     text-align: left;
     left:20px;
     font-size: 24px;
     color: #FFFFFF;
     text-shadow: 0 2px 4px rgba(0,0,0,1);
+
+    @media (max-width: 960px){
+        font-size:20px;
+        top:12vh;
+        left:2vw;
+    }
 `;
 
 const Image = styled('img')`
-    width:300px;
+    width:100%;
     height:255px;
     border-radius:10px 10px 0px 0px;
     object-fit: cover;
+
+
+    @media (max-width: 960px){
+        height:168px;
+    }
+    
 `;
 
 class RecipeCard extends Component {

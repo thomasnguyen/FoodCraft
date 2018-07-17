@@ -7,7 +7,11 @@ import styled from 'styled-components';
 // RecipeCard__info
 const Container = styled('div')`
     display:flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	
+	@media (max-width: 960px){
+        flex-direction:column;
+    }
 `;
 
 class RecipeCardInfo extends Component {

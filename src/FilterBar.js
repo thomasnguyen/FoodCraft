@@ -16,7 +16,7 @@ const SideBar = styled('div')`
 	width: 240px;
 	padding: 20px;
 
-	@media (max-width: 1300px){
+	@media (max-width: 960px){
 		display:none;
 	}
 `;
@@ -60,7 +60,7 @@ const SearchBar = styled('input')`
 
 const MobileWrapper = styled('div')`
 	display:none;
-	@media (max-width: 1300px){
+	@media (max-width: 960px){
 		display:block;
 	}
 `;
