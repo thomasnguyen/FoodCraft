@@ -5,6 +5,7 @@ import IngredientContainer from './IngredientContainer';
 import data_ingredient from './openingredients.json';
 import styled from '../node_modules/styled-components';
 import NoIngredients from './NoIngredients';
+import variables from './variables';
 
 import MobileFilter from './MobileFilter';
 
@@ -38,7 +39,7 @@ const Header = styled('div')`
 
 const SearchBar = styled('input')`
 	background: #ffffff;
-	border: 1px solid #8dba26;
+	border: 1px solid ${variables.green};
 	border-radius: 10px;
 
 	font-size: 14px;
@@ -81,7 +82,22 @@ const OtherFiltersItems = styled('div')`
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
+
+	font-size:16px;
+	color: ${variables.darkText};
+	font-weight:700;
+	line-height:1.5;
 `;
+
+const Select = styled('select')`
+	margin-top:10px;
+	padding:10px;
+	font-size:14px;
+	height:35px;
+	border: 1px solid ${variables.lightText};
+	outline:none;
+`;
+
 class FilterBar extends Component {
 	constructor(props) {
 		super(props);
@@ -176,13 +192,13 @@ class FilterBar extends Component {
 							<OtherFiltersItems>Less than 1 hour prep</OtherFiltersItems>
 							<OtherFiltersItems>Less than 1 hour cooking time</OtherFiltersItems>
 							<OtherFiltersItems>Less than 10 ingredients</OtherFiltersItems>
-							<select>
+							<Select>
 								<option>Sort by Match </option>
 								<option>Sort by Alphabetical Order </option>
 								<option>Sort by Prep Time </option>
 								<option>Sort by Cook Time </option>
 								<option>Sort by # of Ingredients </option>
-							</select>
+							</Select>
 						</OtherFilters>
 					</div>
 				</SideBar>
