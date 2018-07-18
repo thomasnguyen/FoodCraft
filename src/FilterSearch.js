@@ -38,7 +38,7 @@ const Search = styled('input')`
 
 class FilterSearch extends Component {
 	searchHandle() {
-		console.log(this.search.value);
+		console.log(this.sdfsdff.value);
 		//this.props.searchHandle(this.search.value);
 	}
 	render() {
