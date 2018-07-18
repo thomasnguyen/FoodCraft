@@ -25,7 +25,7 @@ class App extends Component {
 			isModalShow: false,
 			recipeModalId: '',
 			recipes: data,
-			showItems: 18,
+			showItems: 12,
 			searchIngredients: []
 		};
 	}
