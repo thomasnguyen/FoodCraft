@@ -91,7 +91,7 @@ class FilterBar extends Component {
 			query: ' ',
 			searchAuto: []
 		});
-		this.search.value = '';
+		document.getElementById('ingredient-search').value = '';
 		document.getElementById('ingredient-search').focus();
 	};
 
@@ -101,10 +101,10 @@ class FilterBar extends Component {
 		this.props.deleteIngredient(array);
 	};
 
-	getInfo = () => {
+	getInfo = (query) => {
 		let array = [];
 		for (var x = 0; x < data_ingredient.length; x++) {
-			if (data_ingredient[x].name.includes(this.search.value) && this.search.value.length > 0) {
+			if (data_ingredient[x].name.includes(query) && query.length > 0) {
 				array.push(data_ingredient[x]);
 			}
 		}
@@ -112,7 +112,7 @@ class FilterBar extends Component {
 	};
 	searchHandle = (value) => {
 		this.setState({ query: value, searchAuto: [] });
-		this.getInfo();
+		this.getInfo(value);
 	};
 	render() {
 		return (

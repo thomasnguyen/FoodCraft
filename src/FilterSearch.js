@@ -37,9 +37,8 @@ const Search = styled('input')`
 `;
 
 class FilterSearch extends Component {
-	searchHandle() {
-		console.log(this.sdfsdff.value);
-		//this.props.searchHandle(this.search.value);
+	searchHandle(c) {
+		this.props.searchHandle(c.target.value);
 	}
 	render() {
 		return (
@@ -55,8 +54,8 @@ class FilterSearch extends Component {
 					id="ingredient-search"
 					type="text"
 					placeholder="Search for ingredient"
-					innerRef={(input) => (this.search = input)}
-					onChange={this.searchHandle}
+					ref={(input) => (this.search = input)}
+					onChange={(c) => this.searchHandle(c)}
 				/>
 			</Container>
 		);
