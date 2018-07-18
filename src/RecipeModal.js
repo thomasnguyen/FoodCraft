@@ -8,7 +8,7 @@ import variables from './variables';
 import helpers from './helper';
 
 const Title = styled('h4')`
-	line-height:2.5;
+	line-height:1.5;
 	margin: 0px;
 	font-weight: 500;
 	text-align: center;
@@ -52,6 +52,10 @@ const Content = styled('section')`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	@media (max-width: 740px){
+		width:90%;
+    }
+	
 `;
 
 const Background = styled('div')`
@@ -86,7 +90,7 @@ const ModalDisplay = styled('div')`
 `;
 
 const FullDetails = styled('button')`
-	width: 510px;
+	width: calc(100% - 60px);
 	margin-top: 25px;
 	height: 50px;
 	background: ${variables.green};

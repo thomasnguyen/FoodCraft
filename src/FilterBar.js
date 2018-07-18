@@ -5,6 +5,7 @@ import IngredientContainer from './IngredientContainer';
 import data_ingredient from './openingredients.json';
 import styled from '../node_modules/styled-components';
 import NoIngredients from './NoIngredients';
+import FilterSearch from './FilterSearch';
 import variables from './variables';
 
 import MobileFilter from './MobileFilter';
@@ -21,9 +22,6 @@ const SideBar = styled('div')`
 	}
 `;
 
-const SearchContainer = styled('div')`
-	position: relative;
-`;
 const Header = styled('div')`
 	text-align: left;
 	/* Ingredients: */
@@ -37,40 +35,11 @@ const Header = styled('div')`
 	margin-bottom: 10px;
 `;
 
-const SearchBar = styled('input')`
-	background: #ffffff;
-	border: 1px solid ${variables.green};
-	border-radius: 10px;
-
-	font-size: 14px;
-	color: #181818;
-	letter-spacing: 0;
-	text-align: left;
-	opacity: 0.57;
-
-	padding: 10px;
-	padding-left: 30px;
-
-	outline-color: transparent;
-	outline-style: none;
-
-	width: calc(100% - 40px);
-
-`;
-
 const MobileWrapper = styled('div')`
 	display:none;
 	@media (max-width: 960px){
 		display:block;
 	}
-`;
-
-const SearchIcon = styled('img')`
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	top: -5px;
-	left: -8px;
 `;
 
 const OtherFilters = styled('div')`
@@ -127,7 +96,6 @@ class FilterBar extends Component {
 	};
 
 	deleteIngredient = (index) => {
-		console.log(this.props.searchIngredients);
 		let array = [ ...this.props.searchIngredients ];
 		array.splice(index, 1);
 		this.props.deleteIngredient(array);
@@ -142,9 +110,8 @@ class FilterBar extends Component {
 		}
 		this.setState({ searchAuto: array });
 	};
-	searchHandle = () => {
-		console.log(this.search.value);
-		this.setState({ query: this.search.value, searchAuto: [] });
+	searchHandle = (value) => {
+		this.setState({ query: value, searchAuto: [] });
 		this.getInfo();
 	};
 	render() {
@@ -154,23 +121,17 @@ class FilterBar extends Component {
 					<MobileFilter />
 				</MobileWrapper>
 				<SideBar>
-					<SearchContainer>
-						<a href="###">
-							<SearchIcon
-								className="search-icon"
-								src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-								alt=""
-							/>
-						</a>
-						<SearchBar
+					<div>
+						<FilterSearch searchHandle={this.searchHandle} />
+						{/*<SearchBar
 							id="ingredient-search"
 							type="text"
 							placeholder="Search for ingredient"
 							innerRef={(input) => (this.search = input)}
 							onChange={this.searchHandle}
-						/>
+						/> */}
 						<FilterIngredients data_ingredient={this.state.searchAuto} addIngredient={this.addIngredient} />
-					</SearchContainer>
+					</div>
 
 					<div>
 						<Header>

@@ -42,9 +42,9 @@ class MobileFilter extends Component {
 		return (
 			<Wrapper>
 				<FilterButton>
-					{' '}
 					<i className="fas fa-filter" /> Apply Filters
 				</FilterButton>
+				<div className="sdf">sdf</div>
 				<FilterWrapper />
 			</Wrapper>
 		);
