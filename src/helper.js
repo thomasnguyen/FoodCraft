@@ -65,6 +65,10 @@ let helpers = {
 
 	percentageCalcDisplay(recipe, ingreidentsList) {
 		return this.percentageCalc(recipe, ingreidentsList) + '%';
+	},
+
+	sluggify(title) {
+		return title.trim().toLowerCase().split(' ').join('-');
 	}
 };
 
