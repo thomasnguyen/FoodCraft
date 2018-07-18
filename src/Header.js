@@ -13,7 +13,12 @@ const Container = styled('div')`
 `;
 
 const FlexContainer = styled('div')`
-    display: flex;  
+	display: flex;  
+	padding-right:10px;
+
+	@media (max-width: 740px){
+		justify-content:space-between;
+    }
 `;
 
 const Logo = styled('div')``;
@@ -60,6 +65,10 @@ const SearchBar = styled('input')`
 		color:rgba(255,255,255,0.4);
 		font-style:italic;
 	}
+
+	@media (max-width: 740px){
+        width:50px;
+    }
 `;
 
 const Search = styled('div')`
@@ -80,6 +89,10 @@ const MenuLinksContainer = styled('div')`
 	& > a:hover{
 		color:rgba(255,255,255,.7);
 	}
+
+	@media (max-width: 740px){
+        display:none;
+    }
 `;
 
 class Header extends Component {

@@ -24,6 +24,10 @@ const Card = styled('article')`
     @media (max-width: 960px){
         width:40vw;
     }
+    @media (max-width: 740px){
+        width:38vw;
+    }
+
 `;
 
 const Title = styled('header')`
@@ -54,9 +58,6 @@ const Description = styled('footer')`
     @media (max-width: 960px){
         height:55px;
     }
-    
-
-
 
 `;
 
@@ -74,6 +75,10 @@ const Name = styled('div')`
         font-size:20px;
         top:60%;
         left:2vw;
+    }
+
+    @media (max-width: 740px){
+        font-size:16px;
     }
 `;
 

@@ -23,12 +23,17 @@ const Stat = styled('div')`
 
 const Icon = styled('i')`
     margin-right:5px;
-    color:${variables.lightText};
+	color:${variables.lightText};
+	@media (max-width: 740px){
+display:none    }
 `;
 
 const Text = styled('span')`
 	color:${variables.darkText};
 	font-size:16px;
+	@media (max-width: 740px){
+		font-size:12px;
+    }
 `;
 
 const Description = styled('div')`
