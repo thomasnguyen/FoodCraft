@@ -72,7 +72,7 @@ const Name = styled('div')`
 
     @media (max-width: 960px){
         font-size:20px;
-        top:12vh;
+        top:60%;
         left:2vw;
     }
 `;
@@ -99,7 +99,7 @@ class RecipeCard extends Component {
 						{this.props.percent}
 					</RecipePercentage>
 					<Name>{this.props.title}</Name>
-					<LazyLoad height={255} once>
+					<LazyLoad height={168} once>
 						<Image src={this.props.image} alt={this.props.title} />
 					</LazyLoad>
 				</Title>
