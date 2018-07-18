@@ -14,6 +14,13 @@ const Item = styled('div')`
 		flex-direction: row;
 		margin-top:1px;
 		margin-bottom:1px;
+
+		div > div > &{
+			margin:auto;
+			display:flex;
+			flex-direction: column;
+			font-size:13px;
+		}
     }
 `;
 
