@@ -4,6 +4,7 @@ import RecipeCardInfo from './RecipeCardInfo';
 
 import styled from 'styled-components';
 import variables from './variables';
+import LazyLoad from 'react-lazyload';
 
 const Card = styled('article')`
     width:300px;
@@ -98,7 +99,9 @@ class RecipeCard extends Component {
 						{this.props.percent}
 					</RecipePercentage>
 					<Name>{this.props.title}</Name>
-					<Image src={this.props.image} alt={this.props.title} />
+					<LazyLoad height={255} once>
+						<Image src={this.props.image} alt={this.props.title} />
+					</LazyLoad>
 				</Title>
 
 				<Description>
