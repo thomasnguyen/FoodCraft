@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import magnify from './images/search-icon.png';
+
 import styled from 'styled-components';
 import variables from './variables';
 
@@ -44,11 +46,7 @@ class FilterSearch extends Component {
 		return (
 			<Container>
 				<a href="###">
-					<SearchIcon
-						className="search-icon"
-						src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-						alt=""
-					/>
+					<SearchIcon className="search-icon" src={magnify} alt="" />
 				</a>
 				<Search
 					id="ingredient-search"
