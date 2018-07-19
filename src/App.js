@@ -35,6 +35,7 @@ class App extends Component {
 			recipeModalId: '',
 			recipes: data,
 			showItems: 12,
+			query: '',
 			searchIngredients: []
 		};
 	}
@@ -83,7 +84,7 @@ class App extends Component {
 				recipes.push(data[y]);
 			}
 		}
-		this.setState({ recipes });
+		this.setState({ recipes, query });
 	};
 
 	updateData = () => {
@@ -127,7 +128,7 @@ class App extends Component {
 						deleteIngredient={this.deleteIngredient}
 						searchIngredients={this.state.searchIngredients}
 					/>
-					<SearchQuery display={this.state.recipes}>No results match sdfsdff</SearchQuery>
+					<SearchQuery display={this.state.recipes}>No results match {this.state.query}</SearchQuery>
 					<RecipeContainer
 						searchIngredients={this.state.searchIngredients}
 						handleOpen={this.showModal}
