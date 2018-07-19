@@ -18,6 +18,15 @@ const Content = styled('div')`
 	}
 `;
 
+const SearchQuery = styled('div')`
+	color:gray;
+	padding-top:50px;
+	font-size:20px;
+	width:100%;
+	text-align:center;
+	display: ${(props) => (props.display.length ? 'none' : 'display')};
+`;
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -118,7 +127,7 @@ class App extends Component {
 						deleteIngredient={this.deleteIngredient}
 						searchIngredients={this.state.searchIngredients}
 					/>
-
+					<SearchQuery display={this.state.recipes}>No results match sdfsdff</SearchQuery>
 					<RecipeContainer
 						searchIngredients={this.state.searchIngredients}
 						handleOpen={this.showModal}

@@ -112,8 +112,7 @@ class Header extends Component {
 					<Logo>
 						<LogoImage src={images} alt="logo" />{' '}
 						<LogoText>
-							{' '}
-							<b>Food</b>Craft{' '}
+							<b>Food</b>Craft
 						</LogoText>
 					</Logo>
 					<Search>
