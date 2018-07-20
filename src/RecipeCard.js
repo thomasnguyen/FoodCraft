@@ -95,27 +95,45 @@ const Image = styled('img')`
     
 `;
 
+const HoverDescription = styled('div')`
+    position:absolute;
+    background:gray;
+    width:300px;
+    height:310px;
+    z-index:1000;
+    opacity:0;
+    &:hover{
+        opacity:1;
+    }
+`;
+
+const CardNoHover = styled('div')`
+
+`;
 class RecipeCard extends Component {
 	render() {
 		return (
 			<Card onClick={() => this.props.handleOpen(this.props.title)}>
-				<Title>
-					<RecipePercentage searchIngredients={this.props.searchIngredients}>
-						{this.props.percent}
-					</RecipePercentage>
-					<Name>{this.props.title}</Name>
-					<LazyLoad height={168} once>
-						<Image src={this.props.image} alt={this.props.title} />
-					</LazyLoad>
-				</Title>
+				<HoverDescription>{this.props.description}</HoverDescription>
+				<CardNoHover>
+					<Title>
+						<RecipePercentage searchIngredients={this.props.searchIngredients}>
+							{this.props.percent}
+						</RecipePercentage>
+						<Name>{this.props.title}</Name>
+						<LazyLoad height={168} once>
+							<Image src={this.props.image} alt={this.props.title} />
+						</LazyLoad>
+					</Title>
 
-				<Description>
-					<RecipeCardInfo
-						ingredients={this.props.ingredients}
-						cook_time={this.props.cook_time}
-						prep_time={this.props.prep_time}
-					/>
-				</Description>
+					<Description>
+						<RecipeCardInfo
+							ingredients={this.props.ingredients}
+							cook_time={this.props.cook_time}
+							prep_time={this.props.prep_time}
+						/>
+					</Description>
+				</CardNoHover>
 			</Card>
 		);
 	}
