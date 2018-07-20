@@ -7,7 +7,7 @@ import variables from './variables';
 import LazyLoad from 'react-lazyload';
 
 const Card = styled('article')`
-    width:300px;
+    width: ${variables.card_fullRes};
     margin-left:10px;
     margin-right:10px;
     margin-bottom:20px;
@@ -22,10 +22,10 @@ const Card = styled('article')`
     }
 
     @media (max-width: 960px){
-        width:40vw;
+        width: ${variables.card_tabletRes};
     }
     @media (max-width: 740px){
-        width:38vw;
+        width: ${variables.card_mobileRes};
     }
 
 `;
@@ -53,7 +53,7 @@ const Description = styled('footer')`
 
 
     box-shadow: 0 3px 2px 0 rgba(0,0,0,0.20);
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 10px 10px;
 
     @media (max-width: 960px){
         height:55px;
@@ -97,14 +97,30 @@ const Image = styled('img')`
 
 const HoverDescription = styled('div')`
     position:absolute;
-    background:gray;
-    width:300px;
-    height:310px;
+    background:green;
+    color:white;
+    width: ${variables.card_fullRes};
+    height: ${variables.card_fullHeight};
     z-index:1000;
     opacity:0;
+    border-radius:10px;
     &:hover{
-        opacity:1;
+        opacity:0.5;
     }
+
+    @media (max-width: 960px){
+        width: ${variables.card_tabletRes};
+        height: ${variables.card_tabletHeight};
+    }
+    @media (max-width: 740px){
+        width: ${variables.card_mobileRes};
+    }
+`;
+
+const ActualDescription = styled('div')`
+    width:80%;
+    margin:auto;
+    padding-top:20px;
 `;
 
 const CardNoHover = styled('div')`
@@ -114,7 +130,9 @@ class RecipeCard extends Component {
 	render() {
 		return (
 			<Card onClick={() => this.props.handleOpen(this.props.title)}>
-				<HoverDescription>{this.props.description}</HoverDescription>
+				<HoverDescription>
+					<ActualDescription>{this.props.description}</ActualDescription>
+				</HoverDescription>
 				<CardNoHover>
 					<Title>
 						<RecipePercentage searchIngredients={this.props.searchIngredients}>
