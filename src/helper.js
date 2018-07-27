@@ -69,6 +69,9 @@ let helpers = {
 		return this.percentageCalc(recipe, ingreidentsList) + '%';
 	},
 
+    filterByIngredientCount(count, ingreidentsList){
+        return ingreidentsList.filter(ingredient => this.calcIngredient(ingredient) < count );
+    },
 	sluggify(title) {
 		return title.trim().toLowerCase().split(' ').join('-');
 	}
