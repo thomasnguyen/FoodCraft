@@ -1,5 +1,10 @@
 import helper from './helper';
 
+// Format Time
+test('Format Time: formatTime(PT40M) => 40min', () => {
+	expect(helper.formatTime('PT30M')).toBe('30 mins');
+});
+
 // Sluggify Function
 test('Sluggify: Thomas Nguyen -> thomas-nguyen', () => {
 	expect(helper.sluggify('Thomas Nguyen')).toBe('thomas-nguyen');
