@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from '../node_modules/styled-components';
 
 const Container = styled('div')`
-    width: 100%;
+    width: 240px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ class FilterIngredients extends Component {
 				<Icon className="fas fa-lemon" />
 				{ingredient.name}
 				<InsertButton>
-					<i class="fa fa-arrow-left" aria-hidden="true" /> Add
+					<i className="fa fa-arrow-left" aria-hidden="true" /> Add
 				</InsertButton>
 			</Ingredient>
 		));

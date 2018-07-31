@@ -67,6 +67,10 @@ const Select = styled('select')`
 	outline:none;
 `;
 
+const FilteredContainer = styled('div')`
+	width:240px;
+`;
+
 class FilterBar extends Component {
 	constructor(props) {
 		super(props);
@@ -121,7 +125,7 @@ class FilterBar extends Component {
 					<MobileFilter />
 				</MobileWrapper>
 				<SideBar>
-					<div>
+					<FilteredContainer>
 						<FilterSearch searchHandle={this.searchHandle} />
 						{/*<SearchBar
 							id="ingredient-search"
@@ -131,7 +135,7 @@ class FilterBar extends Component {
 							onChange={this.searchHandle}
 						/> */}
 						<FilterIngredients data_ingredient={this.state.searchAuto} addIngredient={this.addIngredient} />
-					</div>
+					</FilteredContainer>
 
 					<div>
 						<Header>
