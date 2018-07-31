@@ -124,7 +124,7 @@ class Header extends Component {
 						/>
 					</Search>
 					<MenuLinksContainer>
-						<a href="#">About</a>
+						<a href="/about/">About</a>
 					</MenuLinksContainer>
 				</FlexContainer>
 			</Container>

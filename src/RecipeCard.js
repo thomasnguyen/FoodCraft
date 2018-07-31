@@ -104,7 +104,6 @@ const HoverDescription = styled('div')`
     z-index:1000;
     opacity:0;
     border-radius:10px;
-
     &:hover{
         opacity:0.95;
     }

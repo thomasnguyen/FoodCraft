@@ -3,8 +3,6 @@ let helpers = {
 		if (input === '') {
 			return '???';
 		}
-		var dog = 4;
-
 		var reptms = /^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/;
 		var hours = 0,
 			minutes = 0,
