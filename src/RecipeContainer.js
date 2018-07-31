@@ -56,6 +56,7 @@ class RecipeContainer extends Component {
 				cook_time={recipe.cookTime}
 				prep_time={recipe.prepTime}
 				recipe_yield={recipe.recipeYield}
+				datePublished={recipe.datePublished}
 				key={recipe.name + recipe.ingredients}
 				handleOpen={this.props.handleOpen}
 				searchIngredients={this.props.searchIngredients}
