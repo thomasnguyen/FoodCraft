@@ -97,7 +97,7 @@ const Image = styled('img')`
 
 const HoverDescription = styled('div')`
         position:absolute;
-        background-image: linear-gradient( 30deg,#5abdff 0%,#3466db 100% );
+        background-image: linear-gradient( 30deg,#8DBA26 0%,#597911 100% );
         color:white;
         width: ${variables.card_fullRes};
         height: ${variables.card_fullHeight};
@@ -132,10 +132,10 @@ const PublishedDate = styled('div')`
 `;
 
 const HoverTitle = styled('div')`
-    font-weight:600;
     width:80%;
+    font-weight:500;
     margin:auto;
-    font-size:16px;
+    font-size:18px;
     padding-top:20px;
 `;
 
