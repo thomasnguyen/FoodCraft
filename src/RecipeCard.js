@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import variables from './variables';
 import LazyLoad from 'react-lazyload';
 
+import moment from 'moment';
+
 const Card = styled('article')`
     width: ${variables.card_fullRes};
     margin-left:10px;
@@ -149,7 +151,7 @@ class RecipeCard extends Component {
 				<HoverDescription display={this.props.noHover}>
 					<HoverTitle>{this.props.title}</HoverTitle>
 					<ActualDescription>{this.props.description}</ActualDescription>
-					<PublishedDate>{this.props.datePublished}</PublishedDate>
+					<PublishedDate>{moment(this.props.datePublished, 'YYYYMMDD').fromNow()}</PublishedDate>
 				</HoverDescription>
 				<CardNoHover>
 					<Title>

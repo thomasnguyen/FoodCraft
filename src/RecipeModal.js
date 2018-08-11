@@ -101,6 +101,10 @@ const FullDetails = styled('button')`
 	border-radius: 5px;
 	outline-color: transparent;
 	outline-style: none;
+
+	&:hover{
+		cursor:pointer;
+	}
 `;
 
 class RecipeModal extends React.Component {
