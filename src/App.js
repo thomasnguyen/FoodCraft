@@ -134,6 +134,7 @@ class App extends Component {
 						handleOpen={this.showModal}
 						loadMore={this.loadMore}
 						recipes={this.state.recipes}
+						noHover={this.state.isModalShow}
 					/>
 				</Content>
 

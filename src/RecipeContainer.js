@@ -60,6 +60,7 @@ class RecipeContainer extends Component {
 				key={recipe.name + recipe.ingredients}
 				handleOpen={this.props.handleOpen}
 				searchIngredients={this.props.searchIngredients}
+				noHover={this.props.noHover}
 			/>
 		));
 		return (

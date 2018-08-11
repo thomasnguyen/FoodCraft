@@ -96,14 +96,15 @@ const Image = styled('img')`
 `;
 
 const HoverDescription = styled('div')`
-    position:absolute;
-    background-image: linear-gradient( 30deg,#5abdff 0%,#3466db 100% );
+        position:absolute;
+        background-image: linear-gradient( 30deg,#5abdff 0%,#3466db 100% );
         color:white;
-    width: ${variables.card_fullRes};
-    height: ${variables.card_fullHeight};
-    z-index:1000;
-    opacity:0;
-    border-radius:10px;
+        width: ${variables.card_fullRes};
+        height: ${variables.card_fullHeight};
+        z-index:1000;
+        opacity:0;
+        border-radius:10px;
+        display:  ${(props) => (!props.display ? 'display' : 'none')};
     &:hover{
         opacity:0.95;
     }
@@ -145,7 +146,7 @@ class RecipeCard extends Component {
 	render() {
 		return (
 			<Card onClick={() => this.props.handleOpen(this.props.title)}>
-				<HoverDescription>
+				<HoverDescription display={this.props.noHover}>
 					<HoverTitle>{this.props.title}</HoverTitle>
 					<ActualDescription>{this.props.description}</ActualDescription>
 					<PublishedDate>{this.props.datePublished}</PublishedDate>
