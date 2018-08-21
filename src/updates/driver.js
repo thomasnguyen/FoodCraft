@@ -5561,4 +5561,4 @@ data = removeBlankCook(data);
 data = removeBlankPrep(data);
 data = lessThan10Items(data);
 data = lessThanOneHour(data);
-console.log(data);
+console.log( JSON.stringify(data));

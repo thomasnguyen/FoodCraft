@@ -27,11 +27,15 @@ let helpers = {
 		}
 	},
 
-	filterByLessThanIngredients(number) {
+	filterByLessThanIngredients(data) {
 		return data;
 	},
 
-	filterByLessThanIngredients(number) {
+	filterByLessThanHourPrep(nudatamber) {
+		return data;
+	},
+
+	filterByLessThanHourCook(nudatamber) {
 		return data;
 	},
 
