@@ -1,3 +1,5 @@
+import data from './openrecipes.json';
+
 let helpers = {
 	formatTime: function(input) {
 		if (input === '') {
@@ -23,6 +25,14 @@ let helpers = {
 		if (ingredients !== undefined) {
 			return ingredients.split('\n').length;
 		}
+	},
+
+	filterByLessThanIngredients(number) {
+		return data;
+	},
+
+	filterByLessThanIngredients(number) {
+		return data;
 	},
 
 	splitIngredient(ingredients) {
