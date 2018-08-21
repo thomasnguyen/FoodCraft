@@ -1,4 +1,4 @@
-import data from './openrecipes.json';
+// import data from './openrecipes.json';
 
 let helpers = {
 	formatTime: function(input) {
@@ -28,15 +28,15 @@ let helpers = {
 	},
 
 	filterByLessThanIngredients(data) {
-		return data;
+		return data.filter((e) => e.lessThan10);
 	},
 
-	filterByLessThanHourPrep(nudatamber) {
-		return data;
+	filterByLessThanHourPrep(data) {
+		return data.filter((e) => e.quickPrep);
 	},
 
-	filterByLessThanHourCook(nudatamber) {
-		return data;
+	filterByLessThanHourCook(data) {
+		return data.filter((e) => e.quickCook);
 	},
 
 	splitIngredient(ingredients) {

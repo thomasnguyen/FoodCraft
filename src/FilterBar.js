@@ -156,7 +156,9 @@ class FilterBar extends Component {
 						<OtherFilters>
 							<OtherFiltersItems>Less than 1 hour prep</OtherFiltersItems>
 							<OtherFiltersItems>Less than 1 hour cooking time</OtherFiltersItems>
-							<OtherFiltersItems>Less than 10 ingredients</OtherFiltersItems>
+							<OtherFiltersItems onClick={this.props.filterLess10}>
+								Less than 10 ingredients
+							</OtherFiltersItems>
 							<Select>
 								<option>Sort by Match </option>
 								<option>Sort by Alphabetical Order </option>

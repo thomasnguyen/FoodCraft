@@ -113,6 +113,13 @@ class App extends Component {
 		);
 	};
 
+	filterLess10 = () => {
+		let newData = helpers.filterByLessThanIngredients(this.state.recipes);
+		console.log(newData);
+		console.log(this.state.recipes);
+		this.setState({ recipes: newData });
+	};
+
 	deleteIngredient = (array) => {
 		this.setState({
 			searchIngredients: array
@@ -127,6 +134,7 @@ class App extends Component {
 						addIngredient={this.addIngredient}
 						deleteIngredient={this.deleteIngredient}
 						searchIngredients={this.state.searchIngredients}
+						filterLess10={this.filterLess10}
 					/>
 					<SearchQuery display={this.state.recipes}>No results match {this.state.query}</SearchQuery>
 					<RecipeContainer
