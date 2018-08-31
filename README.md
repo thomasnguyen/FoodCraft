@@ -1,6 +1,6 @@
 # FoodCraft
 
-A simple web apppliaction to help you craft your favorite dishes. Built using ReactJS for the front-end and NodeJS for the back-end.
+A simple web application to help you craft your favorite dishes. Built using ReactJS for the front-end and NodeJS for the back-end.
 
 ![screenshot](https://puu.sh/ANROD/4aa70d513d.png)
 
