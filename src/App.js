@@ -120,6 +120,19 @@ class App extends Component {
 		this.setState({ recipes: newData });
 	};
 
+	filterFastPrep = () => {
+		let newData = helpers.filterByLessThanIngredients(this.state.recipes);
+		console.log(newData);
+		console.log(this.state.recipes);
+		this.setState({ recipes: newData });
+	};
+	filterFastCook = () => {
+		let newData = helpers.filterByLessThanIngredients(this.state.recipes);
+		console.log(newData);
+		console.log(this.state.recipes);
+		this.setState({ recipes: newData });
+	};
+
 	deleteIngredient = (array) => {
 		this.setState({
 			searchIngredients: array
@@ -135,6 +148,8 @@ class App extends Component {
 						deleteIngredient={this.deleteIngredient}
 						searchIngredients={this.state.searchIngredients}
 						filterLess10={this.filterLess10}
+						filterFastPrep={this.filterFastPrep}
+						filterFastCook={this.filterFastCook}
 					/>
 					<SearchQuery display={this.state.recipes}>No results match {this.state.query}</SearchQuery>
 					<RecipeContainer

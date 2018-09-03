@@ -159,8 +159,12 @@ class FilterBar extends Component {
 							<p> Other Filters </p>
 						</Header>
 						<OtherFilters>
-							<OtherFiltersItems>Less than 1 hour prep</OtherFiltersItems>
-							<OtherFiltersItems>Less than 1 hour cooking time</OtherFiltersItems>
+							<OtherFiltersItems onClick={this.props.filterFastPrep}>
+								Less than 1 hour prep
+							</OtherFiltersItems>
+							<OtherFiltersItems onClick={this.props.filterFastCook}>
+								Less than 1 hour cooking time
+							</OtherFiltersItems>
 							<OtherFiltersItems onClick={this.props.filterLess10}>
 								Less than 10 ingredients
 							</OtherFiltersItems>
