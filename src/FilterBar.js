@@ -56,6 +56,11 @@ const OtherFiltersItems = styled('div')`
 	color: ${variables.darkText};
 	font-weight:700;
 	line-height:1.5;
+
+	&:hover{
+		cursor:pointer;
+		opacity:.8;
+	}
 `;
 
 const Select = styled('select')`
