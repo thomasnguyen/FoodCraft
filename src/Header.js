@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import images from './images/logo.png';
 import styled from '../node_modules/styled-components';
+import { Route, Link } from 'react-router-dom';
 
 import variables from './variables';
+import About from './About';
 
 const Container = styled('div')`
     width: 100%;
@@ -124,9 +126,11 @@ class Header extends Component {
 						/>
 					</Search>
 					<MenuLinksContainer>
-						<a href="/about/">About</a>
+						<Link to="/about">about</Link>
 					</MenuLinksContainer>
 				</FlexContainer>
+
+				<Route path="/cities" component={About} />
 			</Container>
 		);
 	}
