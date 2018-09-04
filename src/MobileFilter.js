@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from '../node_modules/styled-components';
+import FilterSearch from './FilterSearch';
 
 const Wrapper = styled('div')`
 	width:100%;
@@ -38,13 +39,16 @@ class MobileFilter extends Component {
 			filterShow: false
 		};
 	}
+
 	render() {
 		return (
 			<Wrapper>
 				<FilterButton>
 					<i className="fas fa-filter" /> Apply Filters
 				</FilterButton>
-				<div className="sdf">sdf</div>
+				<div className="sdf">
+					<FilterSearch />
+				</div>
 				<FilterWrapper />
 			</Wrapper>
 		);

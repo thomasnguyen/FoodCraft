@@ -4,7 +4,6 @@ import styled from '../node_modules/styled-components';
 import { Route, Link } from 'react-router-dom';
 
 import variables from './variables';
-import About from './About';
 
 const Container = styled('div')`
     width: 100%;
@@ -35,6 +34,13 @@ const LogoImage = styled('img')`
 const LogoText = styled('span')`
 	font-size: 18px;
 	padding-left:25px;	
+
+	& > a{
+		font-size: 18px;
+		padding-left:25px;	
+		color:white;
+		text-decoration:none;
+	}
 `;
 
 const SearchBar = styled('input')`
@@ -114,7 +120,9 @@ class Header extends Component {
 					<Logo>
 						<LogoImage src={images} alt="logo" />{' '}
 						<LogoText>
-							<b>Food</b>Craft
+							<Link to="/">
+								<b>Food</b>Craft
+							</Link>
 						</LogoText>
 					</Logo>
 					<Search>
@@ -126,11 +134,9 @@ class Header extends Component {
 						/>
 					</Search>
 					<MenuLinksContainer>
-						<Link to="/about">about</Link>
+						<Link to="/about">About</Link>
 					</MenuLinksContainer>
 				</FlexContainer>
-
-				<Route path="/cities" component={About} />
 			</Container>
 		);
 	}

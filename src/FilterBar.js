@@ -127,7 +127,7 @@ class FilterBar extends Component {
 		return (
 			<Wrapper>
 				<MobileWrapper>
-					<MobileFilter />
+					<MobileFilter searchHandle={this.searchHandle} />
 				</MobileWrapper>
 				<SideBar>
 					<FilteredContainer>

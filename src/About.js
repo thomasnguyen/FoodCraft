@@ -6,7 +6,6 @@ class About extends Component {
 	render() {
 		return (
 			<div>
-				{' '}
 				<Header handleGlobalSearch={this.handleGlobalSearch} />
 			</div>
 		);
