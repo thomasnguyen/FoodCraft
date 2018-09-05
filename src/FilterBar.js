@@ -133,7 +133,7 @@ class FilterBar extends Component {
 					<FilteredContainer>
 						<FilterSearch searchHandle={this.searchHandle} />
 						{/*<SearchBar
-							id="ingredient-search"
+							id="ingredient-search"c
 							type="text"
 							placeholder="Search for ingredient"
 							innerRef={(input) => (this.search = input)}

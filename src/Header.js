@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import images from './images/logo.png';
 import styled from '../node_modules/styled-components';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import variables from './variables';
 
